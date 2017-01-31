@@ -26,7 +26,7 @@
   {\normalfont\large\bfseries}{\thesubsection}{1em}{}
 
 \author{CHARNAY Valentin, FINOT Sylvain}
-\title{\includegraphics[scale=0.4]{logousmb}\\
+\title{\includegraphics[scale=0.3]{logousmb}\\
 Compte rendu de TP : \\ Ondes Centimétriques}
 
 \begin{document}
@@ -42,8 +42,15 @@ Compte rendu de TP : \\ Ondes Centimétriques}
 	On remarque que la tension aux bornes de l'antenne diminue en l'éloignant de l'émetteur, on peut donc en conclure que les ondes émises ne sont pas des ondes planes. On en déduit donc qu'il s'agit d'une onde sphérique, mais concentrée par le cornet. Les barres d'erreur du graphe ci-dessus sont calculées à partir d'incertitudes de lectures. On estime que les incertitudes sont de l'ordre de la plus petite graduation, on néglige les éventuelles fluctuations de la tension A. Ainsi $\Delta d$ vaut 1 mm et $\Delta A$ vaut (1/5) du calibre de l'oscilloscope.
 	Afin de déterminer une éventuelle polarisation de l'onde, il suffit de faire pivoter l'antenne par rapport à l'axe "Émetteur-Récepteur". On remarque alors qu'après rotation de 90° (i.e l'antenne parallèle au sol), la tension est nulle, ce qui implique que l'onde est polarisée.
 	\subsection{Diagramme de rayonnement}
-	On s'intéresse maintenant au diagramme de rayonnement de l'antenne.
-	%DIAGRAMME RAYONNEMENT
+	On s'intéresse maintenant au diagramme de rayonnement de l'antenne.\\
+	On effectue dans un premier un temps un relevé de $A(\psi)$. Sans réelle surprise, on remarque que $A$ est maximale pour $\psi=90$°. On normalise l'expression (facultatif) en posant \~{A}$\equiv\dfrac{A(\psi)}{A_{max}}$. Enfin, on trace \~{A} en coordonnées polaires.\\
+\begin{figure}[h]
+	\centering
+	\caption[Diagramme de rayonnment]{Diagramme de rayonnement}
+	\label{fig:rayonnement}
+	\includegraphics[scale=0.5]{matlab/Rayonnement}
+\end{figure}
+
 	
 	\section{Ondes centimétriques libres}
 	\subsection{Ondes stationnaires}
