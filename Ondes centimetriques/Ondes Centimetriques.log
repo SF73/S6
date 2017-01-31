@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.10)  31 JAN 2017 18:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.10)  31 JAN 2017 19:33
 entering extended mode
 **"./Ondes Centimetriques.tex"
 ("Ondes Centimetriques.tex"
@@ -861,7 +861,7 @@ G,.JBIG2,.JB2,.eps]
 File: logousmb.jpg Graphic file (type jpg)
  <use logousmb.jpg>
 Package pdftex.def Info: logousmb.jpg used on input line 33.
-(pdftex.def)             Requested size: 371.22032pt x 155.85953pt.
+(pdftex.def)             Requested size: 278.42232pt x 116.89761pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 33.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -893,70 +893,81 @@ Package pdftex.def Info: matlab/lnA-eps-converted-to.pdf used on input line 40.
  [1
 
 {C:/Users/Sylvain/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logousm
-b.jpg> <./matlab/lnA-eps-converted-to.pdf>] [2] <schem1.jpg, id=24, 509.5035pt 
-x 337.26pt>
+b.jpg> <./matlab/lnA-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <matlab/Rayonnement.eps>
+(epstopdf)                    date: 2017-01-31 19:16:54
+(epstopdf)                    size: 32438 bytes
+(epstopdf)             Output file: <matlab/Rayonnement-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-01-31 19:26:04
+(epstopdf)                    size: 6728 bytes
+(epstopdf)             Command: <epstopdf --outfile=matlab/Rayonnement-eps-conv
+erted-to.pdf matlab/Rayonnement.eps>
+(epstopdf)             \includegraphics on input line 51.
+Package epstopdf Info: Output file is already uptodate.
+ <matlab/Rayonnement-eps-converted-to.pdf, id=17, 318.18875pt x 317.185pt>
+File: matlab/Rayonnement-eps-converted-to.pdf Graphic file (type pdf)
+
+<use matlab/Rayonnement-eps-converted-to.pdf>
+Package pdftex.def Info: matlab/Rayonnement-eps-converted-to.pdf used on input 
+line 51.
+(pdftex.def)             Requested size: 159.09398pt x 158.5921pt.
+ [2 <./matlab/Rayonnement-eps-converted-to.pdf>] <schem1.jpg, id=28, 509.5035pt
+ x 337.26pt>
 File: schem1.jpg Graphic file (type jpg)
  <use schem1.jpg>
-Package pdftex.def Info: schem1.jpg used on input line 96.
+Package pdftex.def Info: schem1.jpg used on input line 103.
 (pdftex.def)             Requested size: 152.85222pt x 101.17877pt.
 
-<schem2.jpg, id=25, 680.5425pt x 337.26pt>
+[3 <./schem1.jpg>] <schem2.jpg, id=35, 680.5425pt x 337.26pt>
 File: schem2.jpg Graphic file (type jpg)
  <use schem2.jpg>
-Package pdftex.def Info: schem2.jpg used on input line 111.
+Package pdftex.def Info: schem2.jpg used on input line 118.
 (pdftex.def)             Requested size: 190.5506pt x 94.43214pt.
 
-Overfull \hbox (4.04858pt too wide) in paragraph at lines 111--113
+Overfull \hbox (4.04858pt too wide) in paragraph at lines 118--120
 [][]
  []
 
-
-Overfull \vbox (22.81137pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (3.74352pt too high) has occurred while \output is active []
-
-
-[3 <./schem1.jpg> <./schem2.jpg>] <schem3.jpg, id=31, 449.2785pt x 172.2435pt>
+<schem3.jpg, id=36, 449.2785pt x 172.2435pt>
 File: schem3.jpg Graphic file (type jpg)
-
-<use schem3.jpg>
-Package pdftex.def Info: schem3.jpg used on input line 118.
+ <use schem3.jpg>
+Package pdftex.def Info: schem3.jpg used on input line 125.
 (pdftex.def)             Requested size: 269.56917pt x 103.3469pt.
- <schem4.jpg, id=32, 295.85532pt x 191.21437pt>
-File: schem4.jpg Graphic file (type jpg)
 
-<use schem4.jpg>
-Package pdftex.def Info: schem4.jpg used on input line 130.
+<schem4.jpg, id=37, 295.85532pt x 191.21437pt>
+File: schem4.jpg Graphic file (type jpg)
+ <use schem4.jpg>
+Package pdftex.def Info: schem4.jpg used on input line 137.
 (pdftex.def)             Requested size: 147.92729pt x 95.60695pt.
- [4 <./schem3.jpg> <./schem4.jpg>] ("Ondes Centimetriques.aux") ) 
+ [4 <./schem2.jpg> <./schem3.jpg> <./schem4.jpg>] [5] ("Ondes Centimetriques.au
+x") ) 
 Here is how much of TeX's memory you used:
- 5715 strings out of 493334
- 76250 string characters out of 3139245
- 154967 words of memory out of 3000000
- 9117 multiletter control sequences out of 15000+200000
- 18059 words of font info for 53 fonts, out of 3000000 for 9000
+ 5723 strings out of 493334
+ 76479 string characters out of 3139245
+ 155975 words of memory out of 3000000
+ 9123 multiletter control sequences out of 15000+200000
+ 18734 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,10n,30p,606b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Syl
-vain\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <
-C:\Users\Sylvain\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tc
-rm1200.pk> <C:\Users\Sylvain\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecrm1200.pk> <C:\Users\Sylvain\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Sylvain\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Sylvain\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Sylvain\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy8.pfb>
-Output written on "Ondes Centimetriques.pdf" (4 pages, 443040 bytes).
+ <C:\Users\Sylvain\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
+i600\ecti1200.pk> <C:\Users\Sylvain\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\eccc1200.pk> <C:\Users\Sylvain\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk> <C:\Users\Sylvain\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Sylvain\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Syl
+vain\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <
+C:\Users\Sylvain\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
+rm1440.pk> <C:\Users\Sylvain\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi1
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "Ondes Centimetriques.pdf" (5 pages, 453349 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
+ 297 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
