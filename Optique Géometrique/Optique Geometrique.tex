@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[top=2.00cm]{geometry}
+\usepackage{titlesec}
+%%modif des titres de section diminuer la taille
+\graphicspath{{images/}}
+\renewcommand{\thesection}{\Roman{section}}
+\titleformat{\section}
+{\normalfont\bfseries\Large\scshape}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\bfseries\large}{\thesubsection}{1em}{}
+\makeatletter
+\def\@maketitle{
+	\begin{center}
+	% NoLogo
+	%	\vspace*{+2cm}
+	
+	%	Corner Logo
+	%	\begin{flushright}
+	%		\includegraphics[width=40mm]{logo_corner}\\[4ex]
+	%	\end{flushright}
+	
+	%	Top Logo
+		\includegraphics[scale=0.3]{logo_top}
+			
+				{\LARGE \@title }\\[4ex]
+				{\large \@author}\\[4ex]
+				{\large \@date}\\[8ex]
+		\rule{\linewidth}{0.4pt}
+	\end{center}
+}
+\makeatletter
+
+\author{CHARNAY Valentin, FINOT Sylvain}
+\title{Compte rendu de TP :\\ \scshape Optique Géométrique}
+
+\date{\today}
+\begin{document}
+\maketitle
+\section{Mesures de distances focales}
+\subsection{Méthode de Silbermann}
+On considère le montage suivant :\\
+\includegraphics[scale=4]{montageSilberman}\\
+On pose : 
+$$
+\begin{aligned}
+\gamma = \dfrac{\overline{A'B'}}{\overline{AB}} ,\quad y=\overline{AA'},\quad p=\overline{SA},\quad p'=\overline{SA'}
+\end{aligned}
+$$
+\end{document}
