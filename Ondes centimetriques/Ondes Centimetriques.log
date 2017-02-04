@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.10)  4 FEB 2017 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.10)  4 FEB 2017 17:14
 entering extended mode
 **"./Ondes Centimetriques.tex"
 ("Ondes Centimetriques.tex"
@@ -872,6 +872,10 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 34--35
+[][] 
+ []
+
 Package epstopdf Info: Source file: <matlab/lnA.eps>
 (epstopdf)                    date: 2017-01-27 18:10:12
 (epstopdf)                    size: 31792 bytes
@@ -880,14 +884,13 @@ Package epstopdf Info: Source file: <matlab/lnA.eps>
 (epstopdf)                    size: 4964 bytes
 (epstopdf)             Command: <epstopdf --outfile=matlab/lnA-eps-converted-to
 .pdf matlab/lnA.eps>
-(epstopdf)             \includegraphics on input line 40.
+(epstopdf)             \includegraphics on input line 41.
 Package epstopdf Info: Output file is already uptodate.
-
 <matlab/lnA-eps-converted-to.pdf, id=2, 1156.32pt x 345.29pt>
 File: matlab/lnA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use matlab/lnA-eps-converted-to.pdf>
-Package pdftex.def Info: matlab/lnA-eps-converted-to.pdf used on input line 40.
+Package pdftex.def Info: matlab/lnA-eps-converted-to.pdf used on input line 41.
 
 (pdftex.def)             Requested size: 578.15858pt x 172.64456pt.
  [1
@@ -902,43 +905,43 @@ Package epstopdf Info: Source file: <matlab/Rayonnement.eps>
 (epstopdf)                    size: 6728 bytes
 (epstopdf)             Command: <epstopdf --outfile=matlab/Rayonnement-eps-conv
 erted-to.pdf matlab/Rayonnement.eps>
-(epstopdf)             \includegraphics on input line 51.
+(epstopdf)             \includegraphics on input line 52.
 Package epstopdf Info: Output file is already uptodate.
  <matlab/Rayonnement-eps-converted-to.pdf, id=18, 318.18875pt x 317.185pt>
 File: matlab/Rayonnement-eps-converted-to.pdf Graphic file (type pdf)
 
 <use matlab/Rayonnement-eps-converted-to.pdf>
 Package pdftex.def Info: matlab/Rayonnement-eps-converted-to.pdf used on input 
-line 51.
+line 52.
 (pdftex.def)             Requested size: 190.9147pt x 190.31245pt.
  [2 <./matlab/Rayonnement-eps-converted-to.pdf>] <schem1.jpg, id=29, 509.5035pt
  x 337.26pt>
 File: schem1.jpg Graphic file (type jpg)
  <use schem1.jpg>
-Package pdftex.def Info: schem1.jpg used on input line 103.
+Package pdftex.def Info: schem1.jpg used on input line 104.
 (pdftex.def)             Requested size: 152.85222pt x 101.17877pt.
 
 [3 <./schem1.jpg>] <schem2.jpg, id=36, 680.5425pt x 337.26pt>
 File: schem2.jpg Graphic file (type jpg)
  <use schem2.jpg>
-Package pdftex.def Info: schem2.jpg used on input line 118.
+Package pdftex.def Info: schem2.jpg used on input line 119.
 (pdftex.def)             Requested size: 190.5506pt x 94.43214pt.
 
-Overfull \hbox (4.04858pt too wide) in paragraph at lines 118--120
+Overfull \hbox (4.04858pt too wide) in paragraph at lines 119--121
 [][]
  []
 
 <schem3.jpg, id=37, 449.2785pt x 172.2435pt>
 File: schem3.jpg Graphic file (type jpg)
  <use schem3.jpg>
-Package pdftex.def Info: schem3.jpg used on input line 127.
+Package pdftex.def Info: schem3.jpg used on input line 128.
 (pdftex.def)             Requested size: 269.56917pt x 103.3469pt.
  [4 <./schem2.jpg> <./schem3.jpg>] <schem4.jpg, id=41, 295.85532pt x 191.21437p
 t>
 File: schem4.jpg Graphic file (type jpg)
 
 <use schem4.jpg>
-Package pdftex.def Info: schem4.jpg used on input line 138.
+Package pdftex.def Info: schem4.jpg used on input line 139.
 (pdftex.def)             Requested size: 147.92729pt x 95.60695pt.
  [5 <./schem4.jpg>] ("Ondes Centimetriques.aux") ) 
 Here is how much of TeX's memory you used:
@@ -967,7 +970,7 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX
 /type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy8.pfb>
-Output written on "Ondes Centimetriques.pdf" (5 pages, 507176 bytes).
+Output written on "Ondes Centimetriques.pdf" (5 pages, 507188 bytes).
 PDF statistics:
  310 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.10)  4 FEB 2017 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.10)  4 FEB 2017 17:14
 entering extended mode
 **"./Rapport Propagation.tex"
 ("Rapport Propagation.tex"
@@ -583,27 +583,27 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 ("Rapport Propagation.aux")
 \openout1 = `"Rapport Propagation.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Info: Redefining \degres on input line 26.
-LaTeX Info: Redefining \dots on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Info: Redefining \degres on input line 29.
+LaTeX Info: Redefining \dots on input line 29.
 Package frenchb.ldf Info: Setting StandardItemizeEnv=true for
 (frenchb.ldf)             compatibility with enumitem package,
-(frenchb.ldf)              on input line 26.
+(frenchb.ldf)              on input line 29.
 Package frenchb.ldf Info: Setting StandardEnumerateEnv=true for
 (frenchb.ldf)             compatibility with enumitem package,
-(frenchb.ldf)              on input line 26.
-LaTeX Info: Redefining \up on input line 26.
+(frenchb.ldf)              on input line 29.
+LaTeX Info: Redefining \up on input line 29.
 
 (C:\Users\Sylvain\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -694,59 +694,66 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+<logousmb.jpg, id=1, 928.06725pt x 389.65575pt>
+File: logousmb.jpg Graphic file (type jpg)
+ <use logousmb.jpg>
+Package pdftex.def Info: logousmb.jpg used on input line 30.
+(pdftex.def)             Requested size: 278.42232pt x 116.89761pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 30.
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+LaTeX Font Info:    Try loading font information for U+msb on input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 28--29
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 31--32
 [][] 
  []
 
 [1
 
-{C:/Users/Sylvain/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+{C:/Users/Sylvain/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logousm
+b.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
-[2] <schem2.jpg, id=19, 554.07pt x 298.716pt>
+[2] <schem2.jpg, id=20, 554.07pt x 298.716pt>
 File: schem2.jpg Graphic file (type jpg)
  <use schem2.jpg>
-Package pdftex.def Info: schem2.jpg used on input line 85.
+Package pdftex.def Info: schem2.jpg used on input line 88.
 (pdftex.def)             Requested size: 221.62407pt x 119.48427pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
-<schem3.jpg, id=20, 204.16275pt x 130.68825pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+<schem3.jpg, id=21, 204.16275pt x 130.68825pt>
 File: schem3.jpg Graphic file (type jpg)
  <use schem3.jpg>
-Package pdftex.def Info: schem3.jpg used on input line 90.
+Package pdftex.def Info: schem3.jpg used on input line 93.
 (pdftex.def)             Requested size: 102.08112pt x 65.34395pt.
 
-<schem1.jpg, id=21, 204.16275pt x 130.68825pt>
+<schem1.jpg, id=22, 204.16275pt x 130.68825pt>
 File: schem1.jpg Graphic file (type jpg)
  <use schem1.jpg>
-Package pdftex.def Info: schem1.jpg used on input line 91.
+Package pdftex.def Info: schem1.jpg used on input line 94.
 (pdftex.def)             Requested size: 102.08112pt x 65.34395pt.
  [3 <./schem2.jpg> <./schem3.jpg> <./schem1.jpg>] ("Rapport Propagation.aux") )
  
 Here is how much of TeX's memory you used:
- 5166 strings out of 493334
- 68386 string characters out of 3139245
- 151030 words of memory out of 3000000
- 8596 multiletter control sequences out of 15000+200000
+ 5171 strings out of 493334
+ 68465 string characters out of 3139245
+ 151055 words of memory out of 3000000
+ 8600 multiletter control sequences out of 15000+200000
  16875 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,9n,30p,673b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -762,9 +769,9 @@ es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb>
-Output written on "Rapport Propagation.pdf" (3 pages, 195156 bytes).
+Output written on "Rapport Propagation.pdf" (3 pages, 302553 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
+ 232 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
