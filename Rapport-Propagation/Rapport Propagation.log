@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.10)  4 FEB 2017 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.10)  4 FEB 2017 17:27
 entering extended mode
 **"./Rapport Propagation.tex"
 ("Rapport Propagation.tex"
@@ -752,7 +752,7 @@ Package pdftex.def Info: schem1.jpg used on input line 94.
 Here is how much of TeX's memory you used:
  5171 strings out of 493334
  68465 string characters out of 3139245
- 151055 words of memory out of 3000000
+ 151069 words of memory out of 3000000
  8600 multiletter control sequences out of 15000+200000
  16875 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -769,9 +769,9 @@ es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb>
-Output written on "Rapport Propagation.pdf" (3 pages, 302553 bytes).
+Output written on "Rapport Propagation.pdf" (3 pages, 301907 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
+ 230 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
