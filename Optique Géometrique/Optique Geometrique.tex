@@ -11,6 +11,7 @@
 \usepackage{multicol}
 \usepackage{tikz,tkz-tab}
 \usepackage{enumitem}
+\usepackage{bigcenter}
 %%modif des titres de section diminuer la taille
 \graphicspath{{images/}}
 \renewcommand{\thesection}{\Roman{section}}
@@ -22,20 +23,20 @@
 \makeatletter
 \def\@maketitle{
 	\begin{center}
-	% NoLogo
-	%	\vspace*{+2cm}
-	
-	%	Corner Logo
-	%	\begin{flushright}
-	%		\includegraphics[width=40mm]{logo_corner}\\[4ex]
-	%	\end{flushright}
-	
-	%	Top Logo
+		% NoLogo
+		% \vspace*{+2cm}
+		
+		% Corner Logo
+		% \begin{flushright}
+		%  \includegraphics[width=40mm]{logo_corner}\\[4ex]
+		% \end{flushright}
+		
+		% Top Logo
 		\includegraphics[scale=0.3]{logo_top}
-			
-				{\LARGE \@title }\\[4ex]
-				{\large \@author}\\[4ex]
-				{\large \@date}\\[8ex]
+		
+		{\LARGE \@title }\\[4ex]
+		{\large \@author}\\[4ex]
+		{\large \@date}\\[8ex]
 		\rule{\linewidth}{0.4pt}
 	\end{center}
 }
@@ -65,7 +66,7 @@
 			\addtolength{\jot}{1em}
 			\noindent
 			\begin{align*}
-			\dfrac{1}{p'}-\dfrac{1}{p}&=\dfrac{1}{\phi}\quad \text{relation de conjugaison}\\
+			\dfrac{1}{p'}-\dfrac{1}{p}&=\dfrac{1}{\phi} \text{ relation de conjugaison}\\
 			\iff p'&=\dfrac{p\phi}{p+\phi}\\
 			p'-p &= \dfrac{p\phi}{p+\phi}-p\\
 			y &= \dfrac{p\phi-p(p+\phi)}{p+\phi}\\
@@ -107,7 +108,7 @@
 		\endgroup
 		On a alors : $y=\dfrac{-\phi(\gamma-1)^2}{\gamma}$\\
 		\item 
-		Étudions le comportement de la fonction $y(\gamma)$ en supposant $\phi>0$ (lentille convergente). Pour le tracer de la courbe, on pose $\phi=1$, on a alors :
+		Étudions le comportement de la fonction $y(\gamma)$ en supposant $\phi>0$ (lentille convergente). Pour le tracé de la courbe, on pose $\phi=1$, on a alors :
 		\begin{figure}[h]
 			\centering
 			\caption[]{y($\gamma$)}
@@ -134,7 +135,7 @@
 		\end{multicols}
 		\vspace*{+1em}
 		On a $y'(-1)=0 \quad \text{et} \quad y''(-1)>2$, donc -1 est un minimum.\\
-		\item Si on se place dans le cas $\gamma=-1$, $y=4\phi$\\
+		\item Si on se place dans le cas $\gamma=-1$ cela implique $y=4\phi$\\[2pt]
 		On en déduit alors : $\phi=\dfrac{y}{4}$
 		\item 
 		On applique cette méthode sur plusieurs lentilles en prenant en compte une incertitude sur la position de l'écran p' ($\Delta p'=$0,3cm) et une incertitude de lecture sur la position de l'objet p ($\Delta p=$0,3cm).
@@ -160,7 +161,7 @@
 	\begin{center}
 		\includegraphics[scale=1]{focale}
 	\end{center}
-	À partir de la relation de conjugaison, on a déjà montré que si on obtient une image réelle d'un objet réel on a : 
+	À partir de la relation de conjugaison, on a déjà montré que si l'on obtient une image réelle d'un objet réel on a : 
 	\begin{align*}
 	&y=-\dfrac{p^2}{p+\phi}\\
 	\iff &p^2 + y.p + y.\phi=0
@@ -174,7 +175,7 @@
 	\end{align*}
 	Si cette condition est satisfaite, on note $p_+$ et $p_-$ les deux solutions de l'équation :
 	$$p_{\pm}=\dfrac{-y\pm\sqrt{y^2-4y\phi}}{2}$$
-	On pose $x\equiv p_+ - p_-$ la distance relative entre les deux positions des lentilles (cf Schéma).
+	On pose $x\equiv p_+ - p_-$ la distance relative entre les deux positions des lentilles (cf. Schéma).
 	\begin{align*}
 	x&=p_+ - p_-\\
 	&=\sqrt{y^2-4y\phi}\\
@@ -195,10 +196,12 @@
 			\hline
 		\end{tabular}
 	\end{center}
+	
+	Les résultats expérimentaux sont un peu moins bons que ceux obtenus avec la méthode de Silbermann, mais restent tout de même corrects. Si on calcule l'erreur relative, on trouve que celle-ci est inférieure à 5\% dans chacun des cas.
 	\subsection{Commentaires}
 	La méthode de Silbermann est un cas particulier de la méthode de Bessel. Selon nous, la méthode de Bessel est plus simple à réaliser, car dans le cas de Silbermann, il faut procéder par tâtonnement en déplaçant la lentille \underline{et} l'écran.
 	
-	Lorsque l'on s'intéresse aux incertitudes, on constate que la position donnant une image nette n'est pas réellement définie comme un point unique. Les positions $p_+$ et $p_-$ sont sujet à interprétation (généralement de l'ordre du demi-centimètre)
+	Lorsque l'on s'intéresse aux incertitudes, on constate que la position donnant une image nette n'est pas réellement définie comme un point unique. Les positions $p_+$ et $p_-$ sont sujet à interprétation (généralement de l'ordre du demi-centimètre).\\
 	
 	Nous cherchons à présent une méthode pour calculer la distance focale d'une lentille convergente. %Nous savons que la puissance résultante de deux lentilles en contact est la somme algébrique de leur puissance. On met donc en contact une lentille convergente de focale connue avec la lentille divergente à déterminer.
 	Écrivons les formules de conjugaison des deux lentilles:
@@ -235,6 +238,16 @@
 		\end{align*}
 		\endgroup
 	\end{multicols}
+	
+	\begin{figure}[h]
+		% \centering
+		\begin{bigcenter}
+			\includegraphics[scale=0.7]{images/divergente}
+			\caption[]{Montage de détermination de la focale d'une lentille divergente}
+			\label{fig:divergente}
+		\end{bigcenter}
+	\end{figure}
+	
 	Compte tenu des incertitudes, la valeur théorique correspond à la valeur indiquée sur la lentille.
 	\section{Aberrations}
 	L'étude des aberrations s'effectue en utilisant des lentilles convergentes ayant une courbure importante
@@ -243,7 +256,7 @@
 	\begin{center}
 		\includegraphics[scale=0.5]{images/caustique}
 	\end{center}
-	On retrouve bien la forme de caractéristique de l'aberration sphérique.
+	On trouve une forme se rapprochant de la forme caractéristique de l'aberration sphérique.
 	\subsection{Aberration chromatique}
 	Pour pouvoir observer le phénomène d'aberration chromatique, on cherche à faire l'image d'un trou à travers une lentille convergente. On fixe l'objet et la lentille et on déplace l'écran le long de l'axe optique jusqu'à trouver le foyer. C'est alors que l'on met en évidence l'aberration chromatique puisqu'il n'existe plus un foyer unique. On distingue très clairement dans notre cas un foyer bleu puis un foyer rouge plus éloigné de la lentille. Ce phénomène s'explique, car la courbure de la lentille est telle que l'on peut l'assimiler à un prisme pour les rayons les plus éloignés de l'axe optique.
 	
@@ -254,4 +267,3 @@
 	\end{align*}
 	Il est donc normal que le bleu converge plus et que son foyer soit situé avant celui du rouge.
 \end{document}
-
