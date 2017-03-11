@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[top=2.00cm]{geometry}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{bigcenter}
+\usepackage{capt-of}
+%%modif des titres de section diminuer la taille
+\graphicspath{{C:/Users/Sylvain/AppData/Roaming/texstudio/templates/user/}}
+\renewcommand{\thesection}{\Roman{section}}
+\titleformat{\section}
+{\normalfont\bfseries\Large\scshape}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\bfseries\large}{\thesubsection}{1em}{}
+
+\makeatletter
+\def\@maketitle{
+
+	\begin{center}
+	% NoLogo
+	%	\vspace*{+2cm}
+	
+	%	Corner Logo
+	%	\begin{flushright}
+	%		\includegraphics[width=40mm]{logo_corner}\\[4ex]
+	%	\end{flushright}
+	
+	%	Top Logo
+		\includegraphics[scale=0.3]{logo_top}
+
+			
+				{\LARGE \@title }\\[4ex]
+				{\large \@author}\\[4ex]
+				{\large \@date}\\[8ex]
+		\rule{\linewidth}{0.4pt}
+	\end{center}
+}
+\makeatletter
+
+\author{CHARNAY Valentin, FINOT Sylvain}
+\title{Compte rendu de TP :\\ \scshape Réseaux}
+
+\date{\today}
+\begin{document}
+\maketitle
+\section{Théorie}
+\subsection{Relation fondamentale des réseaux}
+On considère le montage suivant : 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1, trim=0 3cm 0 2.5cm,clip]{"res/Schema Young"}
+	\caption[]{Réseau}
+	\label{fig:schema-young}
+\end{figure}
+On sait que l'intensité sur l'écran contient un terme en $\cos(2\pi\dfrac{\delta}{\lambda})$ avec $\delta$ la différence de marche. On regarde a quelle condition l'intensité est maximale.\\
+\begin{align*}
+	2\pi\dfrac{\delta}{\lambda}	&=	2\pi m \\[1em]
+	\iff\dfrac{\delta}{\lambda}		&=	m\\
+\end{align*}
+On exprime la différence de marche :
+\begin{align*}
+	 \delta &=	H_2O_2-O_1H_1\\
+   			&=	a(\sin\theta-\sin \theta_0)
+\end{align*}
+$$\implies \dfrac{(\sin\theta-\sin \theta_0)}{\lambda}		=	\dfrac{m}{a}$$
+Que l'on peut également écrire sous la forme
+$$a(\sin\theta-\sin \theta_0)=m\lambda$$
+Entre d'autres termes, cela signifie que l'intensité sur l'écran (en un point M) est maximale si la différence de marche entre les ondes issues de deux point voisins est un multiple entier de la longueur d'onde.
+\subsection{Propriété des réseaux : dispersion angulaire}
+Soient deux ondes planes, de longueur d'onde voisines $\lambda$ et $\lambda$ + $d\lambda$, qui tombent sur un réseau en faisant le même angle d'incidence $\theta_0$. L'écart d$\theta$ entre les angles que font les ondes diffractées est obtenu à partir de la relation fondamentale des réseaux. En différenciant cette relation, on a
+$$a\cos\theta d\theta=md\lambda$$
+On note $D_a$ la dispersion angulaire du réseau
+$$D_a = \dfrac{d\theta}{d\lambda}=\dfrac{m}{a\cos\theta}$$
+Cette dispersion est plus grande lorsque l'ordre est élevé, c'est à dire m grand, et le pas faible.
+\end{document}

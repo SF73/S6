@@ -49,7 +49,7 @@
 \date{\today}
 \begin{document}
 	\maketitle
-	\section{Théorie}
+%	\section{Théorie}
 	\section{Étude de la réponse impulsionnelle d'un système stigmatique}
 	On utilise dans cette partie un laser rouge de longueur d'onde $\lambda=632,8$nm en guise de source monochromatique. On étudie les figures de diffraction obtenues avec différentes pupilles diffractantes.
 	\subsection{Diffraction par un bord}
@@ -98,11 +98,15 @@
 	&\approx10,22
 	\end{align*}
 	\egroup
-	On retrouve le k+1/4 avec k=10
-	%TODO Que se passe t-il si on translate le trou parallement à l'axe optique. 
+	On retrouve le k+1/4 avec k=10\\
+	\textbf{Remarques :}
+	\begin{itemize}
+		\item  Bien que nous ayons pris le deuxième minimum, le k trouvé est plus grand.
+		\item  Si on déplace le trou parallèlement à l'axe optique, on joue sur la taille des inter-franges. 
+	\end{itemize}
 	\subsection{Diffraction par une fente, un fil}
 	Nous n'avons pas trouvé de fil de même épaisseur qu'une fente. Cependant en prenant une fente d'épaisseur approximativement égale à celle d'un fil (même ordre de grandeur), on observe que les figures de diffraction sont identiques (à l'œil nu).
-	Ce résultat s'explique par le théorème de Babinet qui énonce que les figures de diffraction de deux surfaces complémentaires sont identiques.
+	Ce résultat s'explique par le théorème de Babinet qui énonce que les figures de diffraction de deux surfaces complémentaires sont identiques.\\
 	\begin{bigcenter}
 		\begin{multicols}{2}
 			\bgroup
@@ -114,7 +118,7 @@
 			\columnbreak
 			\vfill
 			\bgroup
-			\includegraphics[scale=0.075,trim=20cm 15cm 0 30cm,clip]{res/"fente 20170207_163022"}
+			\includegraphics[width=\linewidth,trim=20cm 5cm 0 22cm,clip]{res/"fente 20170207_163022"}
 			\captionof{figure}{Diffraction par une fente}
 			\egroup
 		\end{multicols}
@@ -122,40 +126,58 @@
 	
 	\subsection{Diffraction par deux réseaux croisés}
 	Lorsque l'on diffracte le faisceau d'un laser par deux réseaux croisés, on obtient la figure suivante :\\
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.08]{res/reseaux_axes}
-		\caption{Diffraction par réseaux croisés}
-	\end{figure}
+	\begin{bigcenter}
+	\begin{multicols}{2}
+			\includegraphics[width=\linewidth]{res/reseaux_axes}
+			\captionof{figure}{Diffraction par réseaux croisés}
+			\columnbreak
+			\includegraphics[width=\linewidth, trim= 25cm 20cm 25cm 20cm,clip]{"res/reseaux"}
+			\captionof{figure}{Diffraction par réseaux}
+	\end{multicols}
+	\end{bigcenter}
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[scale=0.08]{res/reseaux_axes}
+%		\caption{Diffraction par réseaux croisés}
+%	\end{figure}
 	
-	On remarque différents axes de symétrie:\\
-	Le long de l'axe (A) (i.e verticalement) on retrouve (plus ou moins) la figure de diffraction d'un réseau dont les stries seraient horizontales. De même le long de l'axe (B) on retrouve la contribution d'un réseau dont les lignes seraient verticales.\\
-	On peut émettre l'hypothèse suivante : les axes (C) et (D) ne sont des axes de symétrie que si les pas des réseaux horizontaux et verticaux sont identiques.
+	On remarque différents axes de symétrie:
+	\begin{itemize}
+		\item L'axe (A)
+		\item L'axe (B)
+		\item Les axes (C) et (D). On peut émettre l'hypothèse que ce sont des axes de symétrie que si les pas des réseaux horizontaux et verticaux sont identiques.
+	\end{itemize}
 	\subsection{Diffraction par deux fentes parallèles : frange d'Young}
 	Lorsque l'on réalise la diffraction par deux fentes d'Young, l'intensité observée sur l'écran est donnée par :
 	$$I(\theta)=4I_0\sinc^2\left( {\dfrac{\pi a \theta}{\lambda}}\right) \cos^2\left(\dfrac{\pi l \theta}{\lambda}\right)$$
 	En relevant l'intensité au capteur, on obtient la figure suivante:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.45]{"res/Young OK"}
+		\includegraphics[scale=0.5]{"res/Young OK"}
 		\caption{Franges d'Young}
 	\end{figure}
 	
+	On observe bien l'enveloppe en $\sinc^2$, caractéristique du phénomène de diffraction. A l'intérieur de cette enveloppe, on remarque des oscillations (terme en $\cos^2$). Ces oscillations sont dues aux interférences entre les deux fentes.
 	
-	En s'intéressant au terme en $\cos^2(...)$ (représentant les oscillations à l'intérieur de l'enveloppe en $\sinc$) on peut retrouver la distance entre les deux fentes. Pour cela on cherche une relation liant position d'un minimum et l. On regarde à quelle condition on a :
+	La figure obtenue est donc le résultat de la superposition d'un phénomène de diffraction (fentes fines) et d'interférences.\\
+	
+	En s'intéressant au terme en $\cos^2(...)$ (représentant les oscillations à l'intérieur de l'enveloppe en $\sinc$) on peut retrouver la distance entre les deux fentes. Pour cela on cherche une relation liant position d'un minimum et $l$.
+	
+%	\pagebreak
+	On regarde à quelle condition on a :
 	\begin{align*}
 	&\cos^2\left(\dfrac{\pi l \theta}{\lambda}\right)=0\\
 	\iff& \dfrac{\pi l \theta}{\lambda}=n \pi+\dfrac{\pi}{2}\\
 	\iff& \dfrac{l x}{D\lambda}=n+\dfrac{1}{2}\\
 	\iff& x_n=(n+\dfrac{1}{2})\cdot\dfrac{D\lambda}{l}
 	\end{align*}
-	On note $i$ la longueur entre deux minimum consécutifs i.
+	On note $i$ la longueur entre deux minimum consécutifs.
 	\begin{align*}
 	i&=x_{n+1}-x_{n}\\
 	&=((n+1+\dfrac{1}{2})-(n+\dfrac{1}{2}))\dfrac{D\lambda}{l}\\
 	i&=\dfrac{\lambda D}{l}
 	\end{align*}
-	On peut donc mesurer la distance entre les fentes en mesurant la distance entre chaque minimum. Pour être plus précis, on mesure plusieurs $i$ pour en faire la moyenne. Les mesures se font dans la tache centrale pour faciliter la lecture. 
+	On peut donc mesurer la distance entre les fentes en mesurant la distance entre chaque minimum du $\cos^2$. Pour être plus précis, on mesure plusieurs $i$ pour en faire la moyenne. Les mesures se font dans la tache centrale pour faciliter la lecture. 
 	%On peut facilement trouver la condition pour obtenir un minimum. Pour cela on calcul la différence de marche à la sortie des fentes.
 	%Sur le schéma si dessous, il suffit d'exprimer la longueur des traits rouges
 	%\begin{align*}
@@ -165,7 +187,7 @@
 	%\begin{center}
 	% \includegraphics[scale=1,trim= 0 3cm 3cm 2cm,clip]{"res/Schema Young"}
 	%\end{center}
-	
+	\vspace*{+1em}
 	\begin{multicols}{2}
 		\noindent
 		\begin{align*}
@@ -182,5 +204,10 @@
 			i & Inter-franges & $\dfrac{4970.10^{-6}}{8}$m
 		\end{tabular}
 	\end{multicols}
+La valeur trouvée par application numérique correspond à la valeur indiquée sur les fentes (0,3mm).\\
+\underline{Remarque :} l'incertitude est peut être plus importante que celle calculée ici. Nous n'avons pas considérer la précision du capteur.
+\subsection{Conclusion}
+
+Tous les montages que nous avons vu permettent de mettre en avant l'optique ondulatoire. L'optique géométrique seule ne permet pas d'expliquer la diffraction ni le phénomène d'interférence que nous avons rencontré dans ce TP.
 \end{document}
 
