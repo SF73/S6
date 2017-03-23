@@ -11,6 +11,7 @@
 \usepackage{multicol}
 \usepackage{bigcenter}
 \usepackage{capt-of}
+%\usepackage{calrsfs}
 %%modif des titres de section diminuer la taille
 \graphicspath{{C:/Users/Sylvain/AppData/Roaming/texstudio/templates/user/}}
 \renewcommand{\thesection}{\Roman{section}}
@@ -21,61 +22,123 @@
 
 \makeatletter
 \def\@maketitle{
-
+	
 	\begin{center}
-	% NoLogo
-	%	\vspace*{+2cm}
-	
-	%	Corner Logo
-	%	\begin{flushright}
-	%		\includegraphics[width=40mm]{logo_corner}\\[4ex]
-	%	\end{flushright}
-	
-	%	Top Logo
+		% NoLogo
+		% \vspace*{+2cm}
+		
+		% Corner Logo
+		% \begin{flushright}
+		%  \includegraphics[width=40mm]{logo_corner}\\[4ex]
+		% \end{flushright}
+		
+		% Top Logo
 		\includegraphics[scale=0.3]{logo_top}
-
-			
-				{\LARGE \@title }\\[4ex]
-				{\large \@author}\\[4ex]
-				{\large \@date}\\[8ex]
+		
+		
+		{\LARGE \@title }\\[4ex]
+		{\large \@author}\\[4ex]
+		{\large \@date}\\[8ex]
 		\rule{\linewidth}{0.4pt}
 	\end{center}
 }
 \makeatletter
 
 \author{CHARNAY Valentin, FINOT Sylvain}
-\title{Compte rendu de TP :\\ \scshape Réseaux}
+\title{Compte rendu de TP :\\[4pt] \scshape Réseaux}
 
 \date{\today}
 \begin{document}
-\maketitle
-\section{Théorie}
-\subsection{Relation fondamentale des réseaux}
-On considère le montage suivant : 
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=1, trim=0 3cm 0 2.5cm,clip]{"res/Schema Young"}
-	\caption[]{Réseau}
-	\label{fig:schema-young}
-\end{figure}
-On sait que l'intensité sur l'écran contient un terme en $\cos(2\pi\dfrac{\delta}{\lambda})$ avec $\delta$ la différence de marche. On regarde a quelle condition l'intensité est maximale.\\
-\begin{align*}
-	2\pi\dfrac{\delta}{\lambda}	&=	2\pi m \\[1em]
-	\iff\dfrac{\delta}{\lambda}		&=	m\\
-\end{align*}
-On exprime la différence de marche :
-\begin{align*}
-	 \delta &=	H_2O_2-O_1H_1\\
-   			&=	a(\sin\theta-\sin \theta_0)
-\end{align*}
-$$\implies \dfrac{(\sin\theta-\sin \theta_0)}{\lambda}		=	\dfrac{m}{a}$$
-Que l'on peut également écrire sous la forme
-$$a(\sin\theta-\sin \theta_0)=m\lambda$$
-Entre d'autres termes, cela signifie que l'intensité sur l'écran (en un point M) est maximale si la différence de marche entre les ondes issues de deux point voisins est un multiple entier de la longueur d'onde.
-\subsection{Propriété des réseaux : dispersion angulaire}
-Soient deux ondes planes, de longueur d'onde voisines $\lambda$ et $\lambda$ + $d\lambda$, qui tombent sur un réseau en faisant le même angle d'incidence $\theta_0$. L'écart d$\theta$ entre les angles que font les ondes diffractées est obtenu à partir de la relation fondamentale des réseaux. En différenciant cette relation, on a
-$$a\cos\theta d\theta=md\lambda$$
-On note $D_a$ la dispersion angulaire du réseau
-$$D_a = \dfrac{d\theta}{d\lambda}=\dfrac{m}{a\cos\theta}$$
-Cette dispersion est plus grande lorsque l'ordre est élevé, c'est à dire m grand, et le pas faible.
+	\maketitle
+	\section{Théorie}
+	\subsection{Relation fondamentale des réseaux}
+	On considère le montage suivant : 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1, trim=0 3cm 0 2.5cm,clip]{"res/Schema Young"}
+		\caption[]{Réseau}
+		\label{fig:schema-young}
+	\end{figure}
+	On sait que l'intensité sur l'écran contient un terme en $\cos(2\pi\dfrac{\delta}{\lambda})$ (démontrable rapidement) avec $\delta$ la différence de marche. On regarde à quelle condition l'intensité est maximale.\\
+	\begin{align*}
+	2\pi\dfrac{\delta}{\lambda} &= 2\pi m \\[1em]
+	\iff\dfrac{\delta}{\lambda}  &= m\\
+	\end{align*}
+	On exprime la différence de marche :
+	\begin{align*}
+	\delta &= H_2O_2-O_1H_1\\
+	&= a(\sin\theta-\sin \theta_0)
+	\end{align*}
+	$$\implies \dfrac{(\sin\theta-\sin \theta_0)}{\lambda}  = \dfrac{m}{a}$$
+	Que l'on peut également écrire sous la forme
+	$$a(\sin\theta-\sin \theta_0)=m\lambda$$
+	Entre d'autres termes, cela signifie que l'intensité sur l'écran (en un point M) est maximale si la différence de marche entre les ondes issues de deux points voisins est un multiple entier de la longueur d'onde.
+	\subsection{Propriété des réseaux : dispersion angulaire}
+	Soient deux ondes planes, de longueur d'onde voisines $\lambda$ et $\lambda$ + $d\lambda$, qui tombent sur un réseau en faisant le même angle d'incidence $\theta_0$. L'écart d$\theta$ entre les angles que font les ondes diffractées est obtenu à partir de la relation fondamentale des réseaux. En différenciant cette relation, on a
+	$$a\cos\theta d\theta=md\lambda$$
+	On note $D_a$ la dispersion angulaire du réseau
+	$$D_a = \dfrac{d\theta}{d\lambda}=\dfrac{m}{a\cos\theta}$$
+	Cette dispersion est plus grande lorsque l'ordre est élevé, c'est-à-dire m grand, et le pas faible.
+	
+	\section{Partie pratique}
+	\subsection{Pouvoir de résolution}
+	On peut définir le pouvoir de résolution intrinsèque d'un réseau par la relation suivante :
+	$$\mathcal{R}_0=mN$$
+	Où m est l'ordre et N est le nombre de traits éclairés.\\
+	Pour un réseau de 2,5cm ayant 1000traits par centimètres on a : $$\mathcal{R}_0=2\times2,5\times1000=5000$$
+	
+	En réalité, le pouvoir de résolution dépend du montage (lentille, réseau, etc.):
+	$$\mathcal{R}=\mathcal{R}_0\dfrac{\lambda f}{Nal}$$
+	Où : \\
+	\begin{tabular}{ll}
+		a    & le pas du réseau\\
+		N    & le nombre de traits éclairés\\
+		l    & largeur image de la fente source\\
+		$\lambda$ & longueur d'onde\\
+		f   & focale de la lentille
+	\end{tabular}
+	\\
+	
+	Dans notre cas, on a pu relever à l'ordre 1 :
+	\begin{align*}
+	\mathcal{R} &=3.10^4\dfrac{578.10^{-9}\times20.10^{-2}}{\dfrac{3.10^{-2}\times3.10^4}{2,54}\times\dfrac{2,54}{3.10^4}10^{-3}}\\[1em]
+	&=3.10^4\dfrac{578.10^{-9}\times20.10^{-2}}{3.10^{-2}\times10^{-3}}\\
+	&=115,6
+	\end{align*}
+	
+	On peut également définir le pouvoir de résolution :
+	\begin{align*}
+	\mathcal{R} &=\left(\dfrac{\lambda}{\Delta\lambda}\right)_{min}\\[4pt]
+	&=\dfrac{578}{579,1-577}\\
+	&=275
+	\end{align*}
+	
+	\begin{tabular}{|c|c|}
+		\hline 
+		8000 LPI & 1 seule bande orange \\ 
+		\hline 
+		15000 LPI & 2 raies minces côte à côte \\ 
+		\hline 
+		30000 LPI & 2 raies, mais moins de luminosité \\ 
+		\hline 
+	\end{tabular} 
+	LPI = Line per inch\\
+	
+	\vspace*{+1em}
+	\textbf{Remarque : } On observe que la largeur de la fente impacte également le pouvoir de résolution. Lorsque l'on augmente la largeur de la fente, la luminosité augmente, mais les raies sont davantage confondues (i.e le pouvoir de résolution diminue).\\
+	
+	\subsection{Réalisation d'un spectromètre}
+	On cherche ici à avoir l'ordre 1 aligné avec le réseau. Cela revient à avoir $\theta\approx0$ sur le schéma~\ref{fig:schema-young}. Il faut donc trouver le $\theta_0$ correspondant.
+	
+	Avec cette hypothèse, on peut étudier la dispersion angulaire $D_a$.
+	
+	On a déjà vu que $$D_a=\dfrac{d\theta}{d\lambda}=\dfrac{m}{a\cos\theta}$$
+	Or on s'est placé ici dans le cas ou $\theta_0\ll1$
+	En faisant un développement au premier ordre, on trouve 
+	\begin{align*}
+	D_a &\approx\dfrac{m}{a}\\
+	\end{align*}
+	Où $\dfrac{1}{a}$ représente le nombre de traits par unité de longueur.
+	Ainsi, tant que $\theta$ est petit, la dispersion angulaire est directement proportionnelle aux nombres de traits par cm du réseau.
 \end{document}
+
