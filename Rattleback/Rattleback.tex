@@ -13,7 +13,12 @@
 \usepackage{multicol}
 \usepackage{titling}
 \usepackage{mathtools}
-\usepackage[hidelinks]{hyperref}
+%\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks = true,
+linkcolor = blue,
+urlcolor  = blue,
+citecolor = blue,
+anchorcolor = blue]{hyperref}
 \graphicspath{{C:/Users/Sylvain/AppData/Roaming/texstudio/templates/user/}{./res/}}
 
 %%modif des titres de section diminuer la taille
@@ -28,7 +33,8 @@
 
 %CONFIG
 \author{Sylvain Finot}
-\title{Initiation à la recherche :\\[5pt] \scshape "The Rattleback revisited"}
+\title{Initiation à la recherche :\\[1ex] \scshape Le Rattleback}
+%\title{\scshape Étude du rattleback}
 \date{\today}
 \fancypagestyle{firststyle}{
 	\fancyhf{}
@@ -44,7 +50,7 @@
 	\begin{center}
 		
 		% NoLogo
-		% \vspace*{+2cm}
+		 \vspace*{+2cm}
 		
 		% Corner Logo
 		% \begin{flushright}
@@ -52,7 +58,7 @@
 		% \end{flushright}
 		
 		% Top Logo
-		\includegraphics[scale=0.3]{logo_top}
+		%\includegraphics[scale=0.3]{logo_top}
 		
 		
 		{\LARGE \@title }\\[4ex]
@@ -69,6 +75,11 @@
 	\hskip -\arraycolsep
 	\let\@ifnextchar\new@ifnextchar
 	\array{*\c@MaxMatrixCols c}}
+
+%parenthèses eqref hyperref
+\renewcommand*{\eqref}[1]{%
+	\hyperref[{#1}]{\textup{\tagform@{\ref*{#1}}}}%
+}
 \makeatother
 
 
@@ -98,7 +109,7 @@
 	Autrement dit, si on le met en rotation dans le "bon" sens, le mouvement continue jusqu'à immobilisation due aux forces de frottement. En revanche, si on le met en rotation dans le "mauvais" sens, très vite, l'objet oscille violemment ("rattle"), s'arrête, puis repart en sens inverse (i.e, le "bon" sens). Autre particularité, si on fait osciller le rattleback selon son petit axe (l'axe "pitching" \autoref{fig:rolling-pitching}), il entre en rotation dans le bon sens de rotation.
 	
 	Cet objet, par son mouvement paradoxal, est parfois retrouvé comme accessoire de magicien.
-	Il a également fasciné grand nombre de physiciens et de mathématiciens. Les premières publications à ce sujet datent de 1896 par Gilbert Walker. La plupart des publications actuelles (XXI$^{e}$ siècle) se basent sur les travaux de Sir Hermann Bondi, "The Rigid Body Dynamics of Unidirectional Spin" de 1986.
+	Il a également fasciné grand nombre de physiciens et de mathématiciens. Les premières publications à ce sujet datent de 1896 par Gilbert Walker. La plupart des publications actuelles (XXI$^{e}$ siècle) se basent sur les travaux d'Hermann Bondi, "The Rigid Body Dynamics of Unidirectional Spin" de 1986.
 	\subsection{Un problème de symétrie.}
 	Bien que le mouvement du rattleback soit surprenant et fascinant, il n'y a rien de magique dans cet objet. Ses propriétés sont dues à un problème de symétrie. En effet, le rattleback est un objet asymétrique.
 	
@@ -112,6 +123,8 @@
 	Ensuite, les auteurs s'intéressent au cas contraire, c'est-à-dire, comment à partir d'oscillations le rattleback passe-t-il en rotation.
 	
 	C'est en réunissant les résultats des deux parties que l'on obtient une réponse relativement complète au problème.
+	
+	Avant de rentrer dans le vif du sujet, je précise que j'ai essayé de démontrer la plupart des résultats obtenus par les auteurs. Les étapes de calculs (situés dans la \autoref{sec:calculs}) seront indiquées en référence.
 	% il faut faire un certain nombre d'hypothèses pour pouvoir espérer le résoudre.
 	% %todo : HYPOTHESES
 	% On considère que le point de contact entre le rattleback et le support est au repos.
@@ -120,7 +133,7 @@
 	% Pour simplifier le traitement du problème, on peut le découper en deux parties.\\
 	%  %D'une certaine manière, on peut voir cela comme une conversion d'énergie.\\
 	% La deuxième partie, on s'intéresse au cas contraire, comment à partir d'oscillations le rattleback passe-t-il en rotation.
-	\section{Oscillations}
+	\section{Oscillations induites}
 	Dans cette première partie de l'étude, sans doute la plus complexe, on considère que le rattleback est initialement en rotation selon l'axe vertical sans aucune oscillation. On cherche alors à expliquer pourquoi et comment ce mouvement se transforme en oscillation.
 	%L'idée est de mettre en équation le changement 
 	En ce qui concerne l'aspect calculs, il faudra tenir compte du fait que le référentiel du centre de masse est en rotation par rapport au référentiel du laboratoire.\\
@@ -133,7 +146,7 @@
 	\end{figure}
 	
 	L'étude commence en s'intéressant au point de contact entre le rattleback et le support. On indique cette position par le vecteur $\vec{r}=(x,y,z)$. Après calculs, et en supposant que $x$ et $y$ ne sont pas trop éloignés de l'origine, on peut trouver une expression de la composante z.
-	Cette équation semble être tirée des travaux d' Hermann Bondi. Il s'agit d'un développement obtenu à partir de l'équation d'un ellipsoïde. Les paramètres de cette équation sont décrits plus bas. 
+	Cette équation semble être tirée des travaux d' Hermann Bondi. Il s'agit d'un développement obtenu à partir de l'équation d'un ellipsoïde. Une piste sur la manière de l'obtenir est décrite \autoref{subsec:z}. Les paramètres de cette équation sont décrits plus bas.
 	\begin{equation}
 	z=a\left[ 1-\dfrac {1} {2}p\left( \dfrac {x} {a}\right) ^{2}-q\dfrac {xy} {a^{2}}-\dfrac {1} {2}s\left( \dfrac {y} {a}\right) ^{2}\right]
 	\label{eq:z}
@@ -156,7 +169,6 @@
 	\\
 	
 	L'expression est un peu compliquée, en effet le rattleback étant plus ou moins un demi-ellipsoïde, il n'est pas choquant de retrouver ces paramètres dans l'expression de $\vec{u}$. Une piste sur l'obtention de ce vecteur est détaillée \autoref{subsec:u}
-	
 	Par la suite, en utilisant la formule de Bour \eqref{eq:bour}, et disant que $\vec{u}$ est constant dans le référentiel du laboratoire \eqref{eq:uConstant}, on peut trouver une expression de $\vec{\omega}$\\(Calculs détaillés \autoref{subsec:omega})
 	\pagebreak
 	\begin{multicols}{2}
@@ -222,7 +234,7 @@
 	\label{eq:equa-diff-couplées1}
 	(q\ddot{x}+s\ddot{y})\alpha-n(p\dot{x}+q\dot{y})(\alpha+\beta-\gamma)+n\dot{x}=\dfrac{g}{a}(-y(1-s)+qx)\\
 	\label{eq:equa-diff-couplées2}
-	-(p\ddot{x}+q\ddot{y})\alpha-n(q\dot{x}+s\dot{y})(\alpha+\beta-\gamma)+n\dot{y}=\dfrac{g}{a}(x(1-p)-qy)
+	-(p\ddot{x}+q\ddot{y})\beta-n(q\dot{x}+s\dot{y})(\alpha+\beta-\gamma)+n\dot{y}=\dfrac{g}{a}(x(1-p)-qy)
 	\end{align}
 	Où les paramètres $\alpha,\beta,\gamma$ sont des paramètres sans dimension ayant pour expressions :
 	\begin{equation*}
@@ -236,80 +248,150 @@
 	(résolution \autoref{subsec:pulsations-propres}) \\
 	\begin{align}
 	\Omega_x^2&=\dfrac{g(1-s)}{as\alpha}\\[2ex]
-	\Omega_y^2&=\dfrac{g(1-p)}{ap\alpha}
+	\Omega_y^2&=\dfrac{g(1-p)}{ap\beta}
 	\end{align}
 	%todo ICI
 	%ces expressions dépendent des moments d'inertie et de la courbure (s et p)
 	%expressions calculés explicitement pour LEUR rattleback
 	Par la suite, on reprend les équations différentielles en considérant l'asymétrie et la rotation. Le point le plus important pour les auteurs n'est pas la précision sur les pulsations, mais de mettre en évidence les termes qui déstabilisent les oscillations.
 	
-	Cette partie semble être relativement compliquée, après beaucoup calculs (non détaillés dans l'article),les auteurs arrivent à deux résultats :
-	%todo expr 26 27
+	Cette partie semble être relativement compliquée. En cherchant des solutions de la forme : $x=x_0e^{i\Omega t}$ et $y=y_0e^{i\Omega t}$ et après beaucoup de calculs (non détaillés dans l'article), les auteurs arrivent à :
+	\begin{equation}
+		(\Omega^2-\Omega_x^2)(\Omega^2-\Omega_y^2)=i\dfrac{\Omega^3 nq(\alpha-\beta)}{\alpha\beta sp}
+	\end{equation}
+	En substituant $\Omega=\Omega_x+\Delta_x$ et $\Omega=\Omega_y+\Delta_y$ on trouve au premier ordre.
+	\begin{align}
+	\Delta_x &= i\dfrac{\Omega_x^2 nq(\alpha-\beta)}{2\alpha\beta s p(\Omega_x^2-\Omega_y^2)}\\[2ex]
+	\Delta_y &= -i\dfrac{\Omega_y^2 nq(\alpha-\beta)}{2\alpha\beta s p(\Omega_x^2-\Omega_y^2)}
+	\end{align}
+	L'interprétation est un peu complexe. L'origine du terme $\Omega$ reste encore floue pour moi.\\
+	Pourquoi prendre la même pulsation pour les deux axes? La seule idée que j'ai trouvée pour essayer de m'en convaincre est qu'en tenant compte de l'asymétrie, on a une relation liant les $x$ et les $y$ (idée de couplage). On peut donc imaginer que l'objet oscille selon les deux coordonnées (en "diagonale").\\
+	L'instabilité se traduit mathématiquement par le fait qu'un terme soit négatif pour un sens de rotation donné.\\
+	Les auteurs expliquent ensuite que :
+	\begin{itemize}
+		\item Quelque soit le sens de rotation (signe de $n$), il y aura toujours instabilité.
+%		\item $\Omega_x^2$ étant plus grand que $\Omega_y^2$, la perturbation est plus importante autour de l'axe des $x$ et plus ou moins négligeable autour de $y$.
+		\item Pour un $q$ fixé (ici positif), une rotation dans le sens horaire ($n$ négatif) entraine une instabilité autour de l'axe $x$. À l'inverse, une rotation dans le sens antihoraire entraine une instabilité autour de l'axe $y$ mais celle-ci est plus ou moins négligeable. De plus nous verrons dans la \autoref{sec:osc-to-rot} que c'est l'oscillation autour de l'axe $x$ qui est importante.
+%		\item $\Delta_x$ et $\Delta_y$ ayant des signes opposés, si on fixe $nq$ l'instabilité est soit en $x$ soit en $y$
+	\end{itemize}
 	%la rotation autour de z engenre des oscillations autours de x et y.
 	%le sens instable depend de l'asymetrie q => en changeant le signe de q on inverse le sens instable (miroir)
-	%$\Omega_x etant plus grand que \Omega_y, le rattleback entre d'avantage en rotation autour de x que autour de y
 	\section{Énergie totale}
-	Dans la partie précédente, on a vu que la rotation autour de l'axe z entraine des oscillations autour des axes y et z (pitching et rolling sur \autoref{fig:rolling-pitching}).\\
+	Dans la partie précédente, on a vu que la rotation autour de l'axe z entraine des oscillations autour des axes x et y (pitching et rolling sur \autoref{fig:rolling-pitching}).\\
 	Simplement en tenant compte du fait que l'énergie du système est conservée ou éventuellement dissipée par frottement pour tenir compte de la réalité, l'énergie d'oscillation provient donc de l'énergie de rotation.\\
 	À terme, toute l'énergie de rotation est convertie en énergie d'oscillation. Le rattleback a donc cessé sa rotation autour de z et n'est plus qu'en oscillation.
 	\begin{equation}
 	E_{rot}+E_{x}+E_{y}=cst
 	\end{equation}
-	Avec les expressions obtenues par les auteurs, on peut montrer que l'énergie est essentiellement convertie en oscillation autour de $x$. Ce qui nous amène à la partie suivante de l'analyse.
+	Au temps initial, le rattleback est uniquement en rotation. L'énergie s'exprime donc sous la forme:
+	\begin{equation}
+		E_{rot}=\dfrac{1}{2}I_zn^2
+	\end{equation}
+	Avec les expressions obtenues par les auteurs, on peut montrer que l'énergie est essentiellement convertie en oscillation autour de $x$.
+	\begin{equation}
+		E_x=\dfrac{1}{2}I_x(\Omega_x\theta_0)^2
+	\end{equation}
+	Si $n^2$ diminue alors $\theta_0$ (l'amplitude de l'oscillation) augmente.\\
+	Ce qui nous amène à la partie suivante de l'analyse.
 	%oscillation alors rotation s'arrete.
 	%Rattleback est majoritairement en oscillation autour de x
 	\section{Rotation engendrée par des oscillations}
-	%todo phrase bof
-	Expliquer la rotation engendrée par des oscillations est plus simple que considérer l'inversement du sens de rotation.\\
+	\label{sec:osc-to-rot}
+%	Expliquer la rotation engendrée par des oscillations est plus simple que l'étude de l'instabilité d'un sens de rotation.\\
+	Selon les auteurs, expliquer la rotation engendrée par des oscillations est plus simple qu'étudier l'instabilité d'un sens de rotation. Je n'ai pas trouvé cette étude plus simple, en réalité j'ai été confronté à des problèmes.
+	
+	Comme vous avez pu le remarquer, j'ai tenté de comprendre ce qui avait été fait par les auteurs jusqu'à présent. Dans cette partie, en effectuant le même type de travail, je ne parviens pas à expliquer certains résultats.
+	
 	Pour expliquer ce phénomène, il faut considérer un mouvement d'oscillation autour de l'axe x, et aucune rotation autour de l'axe z.
+	Les auteurs expliquent qu'avec l'asymétrie, le point de contact P satisfait la relation suivante :
+	\begin{equation}
+		\label{eq:asymetrie}
+		x=-qy/p
+	\end{equation}
+	
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.7\linewidth]{res/coupe}
 		\caption{Vu en coupe du rattleback pendant une oscillation autour de l'axe x}{Crédit : Case \& Jalal}
 		\label{fig:coupe}
 	\end{figure}
-	Le centre de masse n'ayant pas la même abscisse selon les $x$, le poids de celui-ci crée un couple au point de contact. Voir figure~\ref{fig:coupe}. Ce couple tend à mettre en rotation le rattleback selon l'axe y.\\
+	Le centre de masse et le point de contact n'ont pas la même abscisse $x$. Le poids du centre masse crée un moment au point de contact. Ce moment de force tend à mettre en rotation le rattleback autour de l'axe $y$. (Voir \autoref{fig:coupe})\\
 	L'expression de ce couple au point P est donnée par :
 	\begin{equation}
 	\dfrac{dL_{py}}{dt}=-mgx=\dfrac{mgqy}{p}
 	\end{equation}
-	%todo détailler ca.
-	Dans le référentiel du centre de masse, au centre de masse (i.e à l'origine) et au premier ordre, on a :
+	Cette expression ce calcul très simplement.\\
+	Dans le référentiel du laboratoire, la vitesse du centre de masse au premier ordre :
 	\begin{align}
-	%  \vec{v} &=\vec{r}\times\vec{\omega} \nonumber \\
-	%    &\approx\left[0,0,a\right]\times\\
 	v_x&=a \omega_y\\
-	\intertext{D'où}
-	\dfrac{dv_x}{dt}&=a\dfrac{d\omega_y}{dt}
+	\intertext{D'où selon les auteurs}
+	\label{eq:acc-cm}
+	\dfrac{dv_x}{dt}&=a\dfrac{d\omega_y}{dt}=\dfrac{gqy}{\beta p a}
 	\end{align}
+	\textbf{Remarque : } Premier problème ici, en refaisant les calculs, avec les mêmes hypothèses, je ne trouve pas la même expression.\\
+	Je trouve : 
+	$$\dfrac{dv_x}{dt}=a\dfrac{d\omega_y}{dt}=\dfrac{gqy}{(\beta-1) p a}$$
+	Qui plus est, pour le rattleback utilisé $\beta=1,49$ (selon les auteurs). Je vous invite à consulter la \autoref{subsec:acceleration-cm} pour plus d'explications sur les calculs que j'ai effectués. Dans l'éventualité où mon expression serait correcte, il faudrait en tenir compte et corriger les résultats découlant de cette expression.
+	
 	L'accélération du centre de masse est équivalente à une force.
 	Le couple produit par cette force tend à mettre en rotation le rattleback autour de l'axe z.\\
 	
-	\textbf{Remarque :} Un point pouvant prêter à confusion dans l'article est qu'il semblerait que les auteurs aient changé d'axe z en cours de route. En effet dans cette section, les résultats énoncés correspondent à des composantes z de vecteur en orientant celui-ci vers le haut.\\
+	\textbf{Remarque : }Pour que le couple mette effectivement l'objet en rotation, il faut supposer que le point de contact ne glisse pas. Intervient alors l'hypothèse que les frottements sont suffisants pour empêcher le glissement. Cette hypothèse est admise par les auteurs. La démonstration serait faisable mais compliquerait beaucoup l'étude. D'un point de vue critique, je pense qu'admettre cette hypothèse est raisonnable puisque l'on peut jouer sur les frottements en changeant la composition du support.
+	\\
 	
-	En considérant ce changement d'axe, on peut calculer la composante du couple tendant à mettre en rotation le rattleback autour de l'axe z.
-	On obtient l'expression suivante :
+%	\textbf{Remarque :} Un point pouvant prêter à confusion dans l'article est qu'il semblerait que les auteurs aient changé d'axe z en cours de route. En effet dans cette section, les résultats énoncés correspondent à des composantes z de vecteur en orientant celui-ci vers le haut.\\
+
+	On peut calculer la composante du couple tendant à mettre en rotation le rattleback autour de l'axe $z$ :
+	%todo : PROBLEME DE SIGNE
 	$$\tau=\dfrac{mgqy^2}{\beta p a}$$
+ 	Là encore, il semblerait y avoir un problème. Je peux sans doute me tromper, mais il semblerait que le signe de cette expression soit incorrect. De plus pour arriver à ce résultat, il faut à priori faire une hypothèse qui ici n'a pas été explicitée par les auteurs. Enfin, le calcul dépendant de l'équation \eqref{eq:acc-cm}, si effectivement mon résultat est correct, il faudrait en plus remplacer $\beta$ par $(\beta-1)$. Là encore je vous invite à consulter le détail des calculs \autoref{subsec:acceleration-angulaire}\\
+	À partir de cette expression, on peut trouver (\ref{subsec:acceleration-angulaire})
+	\begin{equation}
+		\left<\dfrac{dn}{dt}\right>=\dfrac{gqy_0^2}{2\beta p\gamma a^2}
+	\end{equation}
 	%Pour plus de détails dans les calculs, voir 
 	%si CM accéléré <=> a une force qui s'exerce. La dite force est produite par le point de contacte.
 	%On peut calculer le couple résultant de cette force : (32)
 	
+%	Compte tenu des nombreux problèmes, j'ai voulu faire les applications numériques et les comparer aux observations cependant les observations n'ont pas été données quantitativement pour cette partie.
+	\section{Synthèse}
+	Dans la première partie, les auteurs ont réussi à montrer que la rotation autour de l'axe z était instable et induisait des perturbations (oscillations) autour des axes horizontaux $x$ et $y$. Cette instabilité dépend du produit $n\times q$ autrement dit du sens de rotation $n$ et de la façon dont est réalisée l'asymétrie $q$.
 	
+	On montre ensuite que par conservation d'énergie, si il y a oscillation, il y a forcément diminution de l'énergie de rotation. On peut donc parler de conversion de type d'énergie.
 	
-	%todo Résumé
-	%trouver u (invariant) => trouver omega => trouver L => dL/dt = couple => equations du mouvement
-	%ensuite on trouve une mise en oscillation
-	%rotation => oscillation => rotation
-	%résumer la démarche ?
-	%Couper un probleme COMPLEXE en partie plus simples
-	\section{Explications et vérifications des calculs}
+	Pour finir, à partir d'oscillation on montre que le rattleback entre en rotation. La encore le sens dépend de l'asymétrie (du signe de $q$).
+	
+	Pour résumer avec des symboles logiques, on pourrait reformuler cela de la manière suivante:
+	$$\text{rotation ("mauvais sens")}\implies\text{oscillations}\implies\text{rotation ("bon sens")}$$
+	\section{Développement mathématique}
 	\label{sec:calculs}
 	Dans cette section, on essaie de retrouver une partie des expressions données par les auteurs, en détaillant au possible les méthodes et les hypothèses pour y parvenir.\\
 	Par alléger l'écriture, on pose la définition suivante :
 	$$\dfrac{\partial}{\partial x}\equiv\partial_x$$ 
-	\subsection{Vecteur normal}
+	\subsection{Expression de z}
+	\label{subsec:z}
+	La formule \eqref{eq:z} est liée à la forme d'ellipsoïde. Dans l'article, les auteurs expliquent que cette équation est tirée des travaux d'Hermann Bondi ("The Rigid Body Dynamics of Unidirectional Spin" de 1986). J'ai donc voulu savoir comment l'obtenir, cependant la démonstration n'est pas détaillé dans les travaux de Bondi.
+	Voyons si l'on peut obtenir une relation similaire en partant de l'équation d'un ellipsoïde. Considérons tout d'abord un ellipsoïde symétrique. L'équation d'un point $(x,y,z)$ sur la surface est donnée par:
+	\begin{align*}
+		\dfrac{x^2}{a^2}&+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2}=1
+		\intertext{Attention, $a$ n'est pas le même que celui dans \eqref{eq:z}. On peut ainsi exprimer}
+		z^2	&=c^2\left(1-\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}\right)\\
+		z	&=c \left(1-\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}\right)^{1/2}
+		\intertext{Intervient ici l'hypothèse que $\dfrac{x}{a}$ et $\dfrac{y}{b}$ sont petits pour le point de contact (i.e petites oscillations)}
+		\intertext{On peut alors faire un developpement limité.}
+		z	&= c \left(1-\dfrac{1}{2}\dfrac{x^2}{a^2}-\dfrac{1}{2}\dfrac{y^2}{b^2}\right)\\
+\iff	z	&= c \left(1-\dfrac{1}{2}\dfrac{c^2x^2}{a^2c^2}-\dfrac{1}{2}\dfrac{c^2y^2}{b^2c^2}\right)
+		\intertext{On peut alors poser}
+		p=\dfrac{c^2}{a^2}\qquad s=\dfrac{c^2}{b^2}
+		\intertext{On obtient alors :}
+		z	&= c \left(1-\dfrac{1}{2}p\dfrac{x^2}{c^2}-\dfrac{1}{2}s\dfrac{y^2}{c^2}\right)
+	\end{align*}
+	On retrouve l'expression de Bondi dans le cas où $q=0$ c'est a dire d'un ellipsoïde symétrique. Il faudrait alors montrer dans le cas non symétrique l'apparition du terme "couplé".
+	$$q\dfrac{xy}{a^2}$$
+	
+	\subsection{Vecteur normal $\vec{u}$}
 	\label{subsec:u}
-	La formule \eqref{eq:z} est liée à la forme d'ellipsoïde. Je n'ai pas compris pourquoi, mais on trouve le vecteur normal $\vec{u}$ \eqref{eq:uNormal} en prenant le gradient de \eqref{eq:z}. En effet :
+	Je n'ai pas compris pourquoi, mais on trouve le vecteur normal $\vec{u}$ \eqref{eq:uNormal} en prenant le gradient de \eqref{eq:z}. En effet :
 	\begin{align*}
 	\vec{\nabla}\cdot z &= \begin{pmatrix}
 	\partial_x\\
@@ -331,7 +413,6 @@
 	&=\dfrac{\vec{u}}{\sqrt{\left(\dfrac{px+qy}{a}\right)^2+\left( \dfrac{qx+sy}{a}\right)^2+1}}
 	\end{align*}
 	Cette petite "erreur" n'a pas d'importance sur la suite des calculs puisque la suite découle des équations suivantes :
-	%todo : Faire ca sur 2 cols ?
 	\begin{align*}
 	\dfrac{d\vec{A}}{dt}&=\dot{\vec{A}}+\vec{\omega}\times\vec{A}\\[4pt]
 	\dfrac{d\vec{v}}{dt}&=0
@@ -451,12 +532,12 @@
 	\[
 	\begin{cases}
 	s\ddot{y}\alpha=\dfrac{g}{a}(-y(1-s))\\[2ex]
-	-p\ddot{x}\alpha=\dfrac{g}{a}(x(1-p))
+	-p\ddot{x}\beta=\dfrac{g}{a}(x(1-p))
 	\end{cases}
 	\iff
 	\begin{cases}
 	\ddot{y}+\dfrac{g}{as\alpha}(1-s)y=0\\[2ex]
-	\ddot{x}+\dfrac{g}{ap\alpha}(1-p)x=0
+	\ddot{x}+\dfrac{g}{ap\beta}(1-p)x=0
 	\end{cases}
 	\]
 	On rappelle que par construction/définition : $0<p<1$ et $0<s<1$ et de même $g,a,\alpha$ sont strictement positifs.\\
@@ -464,21 +545,94 @@
 	On peut donc poser
 	\begin{align*}
 	\Omega_x^2&=\dfrac{g(1-s)}{as\alpha}\\[2ex]
-	\Omega_y^2&=\dfrac{g(1-p)}{ap\alpha}
+	\Omega_y^2&=\dfrac{g(1-p)}{ap\beta}
 	\end{align*}
 	On reconnait alors les équations bien connues (oscillateurs harmoniques)
 	\[
 	\begin{cases}
-	\ddot{y}+\Omega_y^2\ y=0\\[2ex]
-	\ddot{x}+\Omega_x^2\ x=0
+	\ddot{y}+\Omega_x^2\ y=0\\[2ex]
+	\ddot{x}+\Omega_y^2\ x=0
 	\end{cases}
 	\]
+	Le fait que les indices soient inversés est normal, en effet, c'est la rotation autour de l'axe $x$ qui induit une variation de $y$. Même raisonnement pour $x$.\\
 	Et donc $\Omega_x$ et $\Omega_y$ sont les pulsations propres de l'objet.
+	
+	\subsection{Accélération du centre de masse}
+	\label{subsec:acceleration-cm}
+	En partant des hypothèses suivantes (résultats donnés par les auteurs) :
+	$$\dfrac{dL_{py}}{dt}=\dfrac{mgqy}{p} \qquad \beta=\dfrac{I_y}{ma^2}+1$$
+	Et en appliquant le principe fondamental de la dynamique, on a la relation suivante:
+	\begin{align}
+				\dfrac{dL_{py}}{dt}			&=I_y\dfrac{d\omega_y}{dt}\nonumber\\
+		\iff	\dfrac{mgqy}{p}				&=(\beta-1)ma^2\dfrac{d\omega_y}{dt}\nonumber\\
+		\label{eq:erreur}
+		\iff	\dfrac{mgqy}{pa(\beta-1)}	&=a\dfrac{d\omega_y}{dt}
+	\end{align}
+	Or les auteurs ont introduit
+	$$\dfrac{mgqy}{pa\beta}	=a\dfrac{d\omega_y}{dt}$$
+	Je me suis demandé si on avait $\beta \gg 1$. Pour le rattleback considéré, les auteurs ont calculé et trouvé : $\beta = 1,49$. Cet écart entre les deux formules est non négligeable. En supposant tous les autres paramètres constants, on peut comparer :
+	\begin{align*}
+		f(x)=\dfrac{x}{\beta}&\qquad g(x)=\dfrac{x}{\beta-1}\\
+	\iff\dfrac{g}{f}&=\dfrac{\beta}{\beta-1}
+	\intertext{En prenant $\beta=1,49$}\\
+	\dfrac{g}{f}&\approx3
+	\end{align*}
+	%todo Analyse des conséquences de l'erreur
+	\subsection{Couple et accélération angulaire}
+	\label{subsec:acceleration-angulaire}
+%	Selon le principe fondamental de la dynamique on a (ici écrit directement en composante):
+%	\begin{align*}
+%		\tau_z=I_z\dfrac{d\omega_z}{dt}
+%	\end{align*}
+%	Où $\tau_z$ est la résultante des couples, $\omega_z$ la vitesse angulaire autour de l'axe $z$ et $I_z$ le moment d'inertie correspondant.
+%	
+%	Dans notre cas le couple est $\tau$ et est orienté vers les $z$ positifs (i.e vers le bas).\\
+%	On a aussi $I_z = ma^2\gamma$ (définition \autopageref{eq:equa-diff-couplées2})\\
+%	On trouve donc : 
+%	\begin{equation*}
+%	\dfrac{\omega_z}{dt}
+%	\end{equation*}
+	Pour trouver l'expression de $\tau$, il suffit de calculer le moment créer par l'accélération du centre de masse au point de contact. On a alors (au premier ordre) : 
+	\begin{align*}
+		\vec{T}	&=\vec{r}\times m\dfrac{d\vec{v}}{dt}\\
+		\intertext{Or $\tau=T_z$}
+		\tau&=m(r_x\dot{v_y}-r_y\dot{v_x})\\
+			&=m(x\dot{v_y}-y\dfrac{gqy}{\beta p a})
+	\end{align*}
+	Pour retrouver le $\tau$ donné par les auteurs $\left(\dfrac{mgqy^2}{\beta p a}\right)$, il faut faire l'hypothèse que $\dot{v_y}=0$. Avec cette hypothèse, on obtient : 
+	$$\tau=-\dfrac{mgqy^2}{\beta p a}$$
+	On remarque un problème de signe. Ce problème n'est pas dramatique si l'on sait de quoi l'on parle. Il pourrait être dû à un changement d'orientation de l'axe $z$ en cours de route.
+	En effet, en conservant l'axe $z$ vers le bas (défini au début de l'analyse), il faut bien un signe moins pour correspondre à ce qui est décrit par les auteurs.
+	Autre remarque, si effectivement le résultat \eqref{eq:erreur} est correct il faudrait changer $\beta$ par $(\beta-1)$.
+	
+	Ensuite, on utilise le principe fondamental de la dynamique pour trouver l'accélération angulaire engendrée par ce couple.
+	\begin{align*}
+			\tau 					&=I_z\dfrac{d\omega_z}{dt}\\
+	\iff	\dfrac{d\omega_z}{dt}	&=\dfrac{\tau}{I_z}
+	\intertext{Or $\gamma\equiv\dfrac{I_z}{ma^2}$}
+	\iff	\dfrac{d\omega_z}{dt}	&=-\dfrac{mgqy^2}{\beta p a}\dfrac{1}{ma^2I_z}\\
+									&=-\dfrac{gqy^2}{\beta p a^3 \gamma}
+			\intertext{On a également vu que $n\equiv-\omega_z$. Ainsi,}
+			\dfrac{dn}{dt}			&=\dfrac{gqy^2}{\beta p a^3 \gamma}
+	\end{align*}
+	Les auteurs s'intéressent à la moyenne temporelle de cette expression. De plus ils prennent comme hypothèse que $q$ étant petit, $y$ obéit à l'expression d'un oscillateur harmonique.
+	$$y=y_0\cos(wt+\phi)$$
+	\begin{align}
+		\left<\dfrac{dn}{dt}\right>	&=\left<\dfrac{gqy^2}{\beta p a^3 \gamma}\right>\nonumber\\
+									&=\dfrac{gqy_0^2}{\beta p a^3 \gamma} \left<\cos^2(wt+\phi)\right>\nonumber\\
+		\intertext{En prenant la moyenne temporelle sur une période}
+		\left<\cos^2(wt+\phi)\right>&=\dfrac{1}{2}\nonumber\\
+		\implies \left<\dfrac{dn}{dt}\right>	&=\dfrac{gqy_0^2}{2\beta p a^3 \gamma}
+	\end{align}
+	
 	\section{Conclusion}
-	Pour conclure, ce travail d'analyse d'article scientifique m'a permis d'un certain nombre de choses.\\
+	Pour conclure, ce travail d'analyse d'article scientifique m'a permis de me rendre compte d'un certain nombre de choses.\\
 	
-	Tout d'abord, la façon dont est construite l'étude menée sur le rattleback me semble relativement naturelle. Je pense que cela vient du fait que nous nous familiarisons avec cette démarche scientifique dans nos études, quel que soit le domaine étudié. Ayant suivi qu'une brève introduction à la mécanique du solide, il m'a fallu admettre certains résultats, mais qui je trouve n'a pas été très gênant dans la compréhension de l'article. Cela m'a fait réaliser qu'avec les bases de physique acquis à la fin de la licence on peut comprendre ce qui est fait, suivre les étapes de calculs sans forcement être capable de les faire soi-même de A à Z.
+	Tout d'abord, la façon dont est construite l'étude menée sur le rattleback me semble relativement naturelle. Je pense que cela vient du fait que nous nous familiarisons avec cette démarche scientifique dans nos études, quel que soit le domaine étudié. N'étant pas très à l'aise en mécanique du solide, il m'a fallu admettre certains résultats, mais qui je trouve n'a pas été très gênant dans la compréhension de l'article. Cela m'a fait réaliser qu'avec les bases de physique acquis à la fin de la licence on peut comprendre ce qui est fait, suivre les étapes de calculs sans forcement être capable de les faire soi-même de A à Z.
 	
+	Ensuite, la \autoref{sec:calculs} consacrée à la reprise des calculs m'a beaucoup plu. En commençant ce travail d'analyse, je n'avais pas spécialement pour objectif de refaire les calculs. Mais de résultat en résultat, je me suis pris au jeu et ma curiosité m'a poussée à comprendre d'où venaient les résultats introduits sans réelle démonstration ni explication très précise.\\
+	%Résultats faux, hésiter pas a me contacter.
+	%Aucun erratum, peut etre juste.
 	%comprendre la démarche
 	%voir les hypotheses
 	%probleme LaTeX, beaucoup de temps si on veux etre precis
