@@ -13,6 +13,9 @@
 \usepackage{multicol}
 \usepackage{titling}
 \usepackage{mathtools}
+\usepackage{appendix}
+\renewcommand{\appendixpagename}{Annexes}
+\renewcommand{\appendixtocname}{Annexes}
 %\usepackage[hidelinks]{hyperref}
 \usepackage[colorlinks = true,
 linkcolor = blue,
@@ -29,7 +32,6 @@ anchorcolor = blue]{hyperref}
 {\normalfont\bfseries\large}{\thesubsection}{1em}{}
 
 \addto{\captionsfrench}{\renewcommand{\abstractname}{}}
-
 
 %CONFIG
 \author{Sylvain Finot}
@@ -169,7 +171,7 @@ anchorcolor = blue]{hyperref}
 	\\
 	
 	L'expression est un peu compliquée, en effet le rattleback étant plus ou moins un demi-ellipsoïde, il n'est pas choquant de retrouver ces paramètres dans l'expression de $\vec{u}$. Une piste sur l'obtention de ce vecteur est détaillée \autoref{subsec:u}
-	Par la suite, en utilisant la formule de Bour \eqref{eq:bour}, et disant que $\vec{u}$ est constant dans le référentiel du laboratoire \eqref{eq:uConstant}, on peut trouver une expression de $\vec{\omega}$\\(Calculs détaillés \autoref{subsec:omega})
+	Par la suite, en utilisant la formule de Bour \eqref{eq:bour}, et disant que $\vec{u}$ est constant dans le référentiel du laboratoire \eqref{eq:uConstant}, on peut trouver une expression de $\vec{\omega}$\\(Calculs détaillés \autoref{subsec:omega})\\
 	\pagebreak
 	\begin{multicols}{2}
 		\setlength\columnseprule{0.5pt}
@@ -265,12 +267,12 @@ anchorcolor = blue]{hyperref}
 	\Delta_y &= -i\dfrac{\Omega_y^2 nq(\alpha-\beta)}{2\alpha\beta s p(\Omega_x^2-\Omega_y^2)}
 	\end{align}
 	L'interprétation est un peu complexe. L'origine du terme $\Omega$ reste encore floue pour moi.\\
-	Pourquoi prendre la même pulsation pour les deux axes? La seule idée que j'ai trouvée pour essayer de m'en convaincre est qu'en tenant compte de l'asymétrie, on a une relation liant les $x$ et les $y$ (idée de couplage). On peut donc imaginer que l'objet oscille selon les deux coordonnées (en "diagonale").\\
-	L'instabilité se traduit mathématiquement par le fait qu'un terme soit négatif pour un sens de rotation donné.\\
+	Pourquoi prendre la même pulsation pour les deux axes? La seule idée que j'ai trouvée pour essayer de m'en convaincre est qu'en tenant compte de l'asymétrie, on a une relation liant les $x$ et les $y$ (idée de couplage).\\
+	De ce que j'ai pu comprendre, l'instabilité se traduit mathématiquement par le fait qu'un terme soit négatif pour un sens de rotation donné.\\
 	Les auteurs expliquent ensuite que :
 	\begin{itemize}
-		\item Quelque soit le sens de rotation (signe de $n$), il y aura toujours instabilité.
-%		\item $\Omega_x^2$ étant plus grand que $\Omega_y^2$, la perturbation est plus importante autour de l'axe des $x$ et plus ou moins négligeable autour de $y$.
+		\item Quelque soit le sens de rotation (signe de $n$), il y aura toujours instabilité puisque $\Delta_x$ et $\Delta_y$ ont des signes opposés
+		\item $\Omega_x^2$ étant plus grand que $\Omega_y^2$, la perturbation est plus importante autour de l'axe des $x$ et plus ou moins négligeable autour de $y$.
 		\item Pour un $q$ fixé (ici positif), une rotation dans le sens horaire ($n$ négatif) entraine une instabilité autour de l'axe $x$. À l'inverse, une rotation dans le sens antihoraire entraine une instabilité autour de l'axe $y$ mais celle-ci est plus ou moins négligeable. De plus nous verrons dans la \autoref{sec:osc-to-rot} que c'est l'oscillation autour de l'axe $x$ qui est importante.
 %		\item $\Delta_x$ et $\Delta_y$ ayant des signes opposés, si on fixe $nq$ l'instabilité est soit en $x$ soit en $y$
 	\end{itemize}
@@ -347,14 +349,33 @@ anchorcolor = blue]{hyperref}
  	Là encore, il semblerait y avoir un problème. Je peux sans doute me tromper, mais il semblerait que le signe de cette expression soit incorrect. De plus pour arriver à ce résultat, il faut à priori faire une hypothèse qui ici n'a pas été explicitée par les auteurs. Enfin, le calcul dépendant de l'équation \eqref{eq:acc-cm}, si effectivement mon résultat est correct, il faudrait en plus remplacer $\beta$ par $(\beta-1)$. Là encore je vous invite à consulter le détail des calculs \autoref{subsec:acceleration-angulaire}\\
 	À partir de cette expression, on peut trouver (\ref{subsec:acceleration-angulaire})
 	\begin{equation}
-		\left<\dfrac{dn}{dt}\right>=\dfrac{gqy_0^2}{2\beta p\gamma a^2}
+	\label{eq:moyenne-rot}
+		\left<\dfrac{dn}{dt}\right>=\dfrac{gqy_0^2}{2\beta p\gamma a^3}
 	\end{equation}
 	%Pour plus de détails dans les calculs, voir 
 	%si CM accéléré <=> a une force qui s'exerce. La dite force est produite par le point de contacte.
 	%On peut calculer le couple résultant de cette force : (32)
 	
 %	Compte tenu des nombreux problèmes, j'ai voulu faire les applications numériques et les comparer aux observations cependant les observations n'ont pas été données quantitativement pour cette partie.
+
+	\section{Applications numérique}
+	Les auteurs ont mesuré les dimensions de leur rattleback pour ensuite en calculer les différentes propriétés/paramètres tels que : les moments d'inerties, les paramètres de courbures ($p$ et $s$) etc.\\
+	Avec ses valeurs ils ont pu calculer les fréquences propres $\Omega_x$ et $\Omega_y$ et les comparer à la réalité. Les fréquences réelles sont obtenues à partir d'un enregistrement vidéo de leur rattleback.
+
+	\begin{center}
+		\begin{tabular}{lll}
+		&	Calcul	&Expérimental\\[4pt]
+		$\Omega_x$		&	60,9s$^{-1}$	&47s$^{-1}\pm$9,4\\
+		$\Omega_x$		&	8,77s$^{-1}$	&6,3s$^{-1}\pm$1,3
+		\end{tabular}
+	\end{center}
+	Ainsi, compte tenu des nombreuses approximations faites, les résultats sont cohérents avec les observations.
+	J'ai été un peu déçu que les auteurs n'aient pas donné les résultats expérimentaux de l'expression \eqref{eq:moyenne-rot}. Il est simplement mentionné dans l'article, qu'en faisant l'application numérique pour $y_0=2mm$,
+	$$\left<\dfrac{dn}{dt}\right>=0,5rad.s^{-1}$$
+	Ce qui serait cohérent avec leur observations.\\
+	Au passage, cette expression est une accélération angulaire et devrait donc être en rad.s$^{-2}$.
 	\section{Synthèse}
+	
 	Dans la première partie, les auteurs ont réussi à montrer que la rotation autour de l'axe z était instable et induisait des perturbations (oscillations) autour des axes horizontaux $x$ et $y$. Cette instabilité dépend du produit $n\times q$ autrement dit du sens de rotation $n$ et de la façon dont est réalisée l'asymétrie $q$.
 	
 	On montre ensuite que par conservation d'énergie, si il y a oscillation, il y a forcément diminution de l'énergie de rotation. On peut donc parler de conversion de type d'énergie.
@@ -363,6 +384,19 @@ anchorcolor = blue]{hyperref}
 	
 	Pour résumer avec des symboles logiques, on pourrait reformuler cela de la manière suivante:
 	$$\text{rotation ("mauvais sens")}\implies\text{oscillations}\implies\text{rotation ("bon sens")}$$
+	
+	\section{Conclusion}
+	Pour conclure, ce travail d'analyse d'article scientifique m'a permis de me rendre compte d'un certain nombre de choses.\\
+	
+	Tout d'abord, la façon dont est construite l'étude menée sur le rattleback me semble relativement naturelle. Je pense que cela vient du fait que nous nous familiarisons avec cette démarche scientifique dans nos études, quel que soit le domaine étudié. N'étant pas très à l'aise en mécanique du solide, il m'a fallu admettre certains résultats, mais qui je trouve n'a pas été très gênant dans la compréhension de l'article. Cela m'a fait réaliser qu'avec les bases de physique acquis à la fin de la licence on peut comprendre ce qui est fait, suivre les étapes de calculs sans forcement être capable de les faire soi-même de A à Z.
+	
+	Ensuite, la partie consacrée à la reprise des calculs (en annexe) m'a beaucoup plu. En commençant ce travail d'analyse, je n'avais pas spécialement pour objectif de refaire les calculs. Mais de résultat en résultat, je me suis pris au jeu et ma curiosité m'a poussée à comprendre d'où venaient les résultats introduits sans réelle démonstration ni explication très précise.
+	%Résultats faux, hésiter pas a me contacter.
+	%Aucun erratum, peut etre juste.
+
+	\pagebreak
+	\appendix
+	\appendixpage
 	\section{Développement mathématique}
 	\label{sec:calculs}
 	Dans cette section, on essaie de retrouver une partie des expressions données par les auteurs, en détaillant au possible les méthodes et les hypothèses pour y parvenir.\\
@@ -624,19 +658,6 @@ anchorcolor = blue]{hyperref}
 		\left<\cos^2(wt+\phi)\right>&=\dfrac{1}{2}\nonumber\\
 		\implies \left<\dfrac{dn}{dt}\right>	&=\dfrac{gqy_0^2}{2\beta p a^3 \gamma}
 	\end{align}
-	
-	\section{Conclusion}
-	Pour conclure, ce travail d'analyse d'article scientifique m'a permis de me rendre compte d'un certain nombre de choses.\\
-	
-	Tout d'abord, la façon dont est construite l'étude menée sur le rattleback me semble relativement naturelle. Je pense que cela vient du fait que nous nous familiarisons avec cette démarche scientifique dans nos études, quel que soit le domaine étudié. N'étant pas très à l'aise en mécanique du solide, il m'a fallu admettre certains résultats, mais qui je trouve n'a pas été très gênant dans la compréhension de l'article. Cela m'a fait réaliser qu'avec les bases de physique acquis à la fin de la licence on peut comprendre ce qui est fait, suivre les étapes de calculs sans forcement être capable de les faire soi-même de A à Z.
-	
-	Ensuite, la \autoref{sec:calculs} consacrée à la reprise des calculs m'a beaucoup plu. En commençant ce travail d'analyse, je n'avais pas spécialement pour objectif de refaire les calculs. Mais de résultat en résultat, je me suis pris au jeu et ma curiosité m'a poussée à comprendre d'où venaient les résultats introduits sans réelle démonstration ni explication très précise.\\
-	%Résultats faux, hésiter pas a me contacter.
-	%Aucun erratum, peut etre juste.
-	%comprendre la démarche
-	%voir les hypotheses
-	%probleme LaTeX, beaucoup de temps si on veux etre precis
-	%Rq: avec des bases de physique, on peut comprendre ce qui est fait sans forcement être capable de refaire tout les calculs.
 \end{document}
 % Ils disent qu'ils n'ont pas forcément été plus loin dans l'analyse que leur prédeccesseur mais qu'a l'aide de bonnes approximations, ils ont pu grandement alleger les calculs et ainsi arrivé plus rapidement et facilement a un resultat.
 %beaucoup d'autres articles qui traite le probleme en partant des memes bases mais par exemple préférence matricielle
