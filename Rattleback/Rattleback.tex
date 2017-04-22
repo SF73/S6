@@ -42,7 +42,7 @@ anchorcolor = blue]{hyperref}
 	\fancyhf{}
 	\setlength{\footskip}{2cm}
 	\renewcommand{\headrulewidth}{0pt}
-	\cfoot{\textcolor{lightgray}{\theauthor \ | Initiation à la recherche | Mars 2017}}
+	\cfoot{\textcolor{lightgray}{\theauthor \ | Initiation à la recherche | Mai 2017}}
 	\rfoot{\thepage}
 }
 \pagestyle{firststyle}
@@ -110,8 +110,9 @@ anchorcolor = blue]{hyperref}
 	
 	Autrement dit, si on le met en rotation dans le "bon" sens, le mouvement continue jusqu'à immobilisation due aux forces de frottement. En revanche, si on le met en rotation dans le "mauvais" sens, très vite, l'objet oscille violemment ("rattle"), s'arrête, puis repart en sens inverse (i.e, le "bon" sens). Autre particularité, si on fait osciller le rattleback selon son petit axe (l'axe "pitching" \autoref{fig:rolling-pitching}), il entre en rotation dans le bon sens de rotation.
 	
+	%todo : Qui est Gilbert Walker
 	Cet objet, par son mouvement paradoxal, est parfois retrouvé comme accessoire de magicien.
-	Il a également fasciné grand nombre de physiciens et de mathématiciens. Les premières publications à ce sujet datent de 1896 par Gilbert Walker. La plupart des publications actuelles (XXI$^{e}$ siècle) se basent sur les travaux d'Hermann Bondi, "The Rigid Body Dynamics of Unidirectional Spin" de 1986.
+	Il a également fasciné grand nombre de physiciens et de mathématiciens. Les premières publications à ce sujet datent de 1896 par Gilbert Walker, physicien du XX$^{e}$ siècle. La plupart des publications actuelles (XXI$^{e}$ siècle) se basent sur les travaux d'Hermann Bondi, "The Rigid Body Dynamics of Unidirectional Spin" de 1986.
 	\subsection{Un problème de symétrie.}
 	Bien que le mouvement du rattleback soit surprenant et fascinant, il n'y a rien de magique dans cet objet. Ses propriétés sont dues à un problème de symétrie. En effet, le rattleback est un objet asymétrique.
 	
@@ -126,7 +127,7 @@ anchorcolor = blue]{hyperref}
 	
 	C'est en réunissant les résultats des deux parties que l'on obtient une réponse relativement complète au problème.
 	
-	Avant de rentrer dans le vif du sujet, je précise que j'ai essayé de démontrer la plupart des résultats obtenus par les auteurs. Les étapes de calculs (situés dans la \autoref{sec:calculs}) seront indiquées en référence.
+	Avant de rentrer dans le vif du sujet, je précise que j'ai essayé de démontrer la plupart des résultats obtenus par les auteurs. Les étapes de calculs (situés dans l'annexe \ref{sec:calculs}) seront indiquées en référence.
 	% il faut faire un certain nombre d'hypothèses pour pouvoir espérer le résoudre.
 	% %todo : HYPOTHESES
 	% On considère que le point de contact entre le rattleback et le support est au repos.
@@ -138,8 +139,8 @@ anchorcolor = blue]{hyperref}
 	\section{Oscillations induites}
 	Dans cette première partie de l'étude, sans doute la plus complexe, on considère que le rattleback est initialement en rotation selon l'axe vertical sans aucune oscillation. On cherche alors à expliquer pourquoi et comment ce mouvement se transforme en oscillation.
 	%L'idée est de mettre en équation le changement 
-	En ce qui concerne l'aspect calculs, il faudra tenir compte du fait que le référentiel du centre de masse est en rotation par rapport au référentiel du laboratoire.\\
-	Le repère utilisé a pour origine le centre de masse et comme axes, les axes de symétrie (en terme de distribution de masse).\\
+	En ce qui concerne les calculs, il faudra tenir compte du fait que le référentiel du centre de masse est en rotation par rapport au référentiel du laboratoire.\\
+	Le repère utilisé a pour origine le centre de masse et comme axes, les axes de symétrie (en terme de distribution de masse).\nopagebreak
 	\begin{figure}[h]
 		\centering
 		\caption{Le rattleback vu de dessus. La répartition de masse ne respecte pas la symétrie de la forme.}{Crédit : Case \& Jalal}
@@ -168,7 +169,7 @@ anchorcolor = blue]{hyperref}
 		$a$ &distance entre le centre de masse et le point le plus bas du rattleback au repos\\
 		$q$ &facteur représentant l'asymétrie de l'objet (sans dimension)
 	\end{tabular}
-	\\
+	\\[2ex]
 	
 	L'expression est un peu compliquée, en effet le rattleback étant plus ou moins un demi-ellipsoïde, il n'est pas choquant de retrouver ces paramètres dans l'expression de $\vec{u}$. Une piste sur l'obtention de ce vecteur est détaillée \autoref{subsec:u}
 	Par la suite, en utilisant la formule de Bour \eqref{eq:bour}, et disant que $\vec{u}$ est constant dans le référentiel du laboratoire \eqref{eq:uConstant}, on peut trouver une expression de $\vec{\omega}$\\(Calculs détaillés \autoref{subsec:omega})\\
@@ -195,7 +196,7 @@ anchorcolor = blue]{hyperref}
 	\end{multicols}
 	
 	
-	On peut alors trouver une expression de la vitesse, en effet : $\vec{v}=-\vec{r}\times\vec{\omega}$.\\
+	On peut alors trouver une expression de la vitesse, en effet : $\vec{v}=-\vec{r}\times\vec{\omega}$.\\[2ex]
 	\textbf{Remarques} :
 	\begin{enumerate}
 		\item Pour garder uniquement les termes du 1er ordre, cela revient à prendre $\vec{r}=(x,y,a)$ puisque $z=a$ au premier ordre.
@@ -228,7 +229,7 @@ anchorcolor = blue]{hyperref}
 	\end{equation}
 	On a alors deux expressions de $d\vec{L}/dt$.\\
 	En calculant les deux termes, on obtient deux équations différentielles (couplées) correspondant aux égalités des composantes $x$ et $y$ des deux termes.\\
-	La composante z de $d\vec{L}/dt$ étant égale a 0 au premier ordre, on n'obtient pas d'équation.\\
+	La composante z de $d\vec{L}/dt$ étant égale à 0 au premier ordre, on n'obtient pas d'équation.\\
 	Les auteurs ont donc réussi à obtenir des équations du mouvement.\\
 	
 	Après un peu de mise en forme : 
@@ -322,8 +323,9 @@ anchorcolor = blue]{hyperref}
 	\begin{equation}
 	\dfrac{dL_{py}}{dt}=-mgx=\dfrac{mgqy}{p}
 	\end{equation}
-	Cette expression ce calcul très simplement.\\
-	Dans le référentiel du laboratoire, la vitesse du centre de masse au premier ordre :
+	Cette expression se calcul très simplement.\\
+	
+	Dans le référentiel du laboratoire, la vitesse du centre de masse au premier ordre a pour expression:
 	\begin{align}
 	v_x&=a \omega_y\\
 	\intertext{D'où selon les auteurs}
@@ -372,7 +374,7 @@ anchorcolor = blue]{hyperref}
 	Ainsi, compte tenu des nombreuses approximations faites, les résultats sont cohérents avec les observations.
 	J'ai été un peu déçu que les auteurs n'aient pas donné les résultats expérimentaux de l'expression \eqref{eq:moyenne-rot}. Il est simplement mentionné dans l'article, qu'en faisant l'application numérique pour $y_0=2mm$,
 	$$\left<\dfrac{dn}{dt}\right>=0,5rad.s^{-1}$$
-	Ce qui serait cohérent avec leur observations.\\
+	Ce qui serait cohérent avec leurs observations.\\
 	Au passage, cette expression est une accélération angulaire et devrait donc être en rad.s$^{-2}$.
 	\section{Synthèse}
 	
@@ -390,7 +392,12 @@ anchorcolor = blue]{hyperref}
 	
 	Tout d'abord, la façon dont est construite l'étude menée sur le rattleback me semble relativement naturelle. Je pense que cela vient du fait que nous nous familiarisons avec cette démarche scientifique dans nos études, quel que soit le domaine étudié. N'étant pas très à l'aise en mécanique du solide, il m'a fallu admettre certains résultats, mais qui je trouve n'a pas été très gênant dans la compréhension de l'article. Cela m'a fait réaliser qu'avec les bases de physique acquis à la fin de la licence on peut comprendre ce qui est fait, suivre les étapes de calculs sans forcement être capable de les faire soi-même de A à Z.
 	
-	Ensuite, la partie consacrée à la reprise des calculs (en annexe) m'a beaucoup plu. En commençant ce travail d'analyse, je n'avais pas spécialement pour objectif de refaire les calculs. Mais de résultat en résultat, je me suis pris au jeu et ma curiosité m'a poussée à comprendre d'où venaient les résultats introduits sans réelle démonstration ni explication très précise.
+	Ensuite, la partie consacrée à la reprise des calculs (en annexe) m'a beaucoup plu. En commençant ce travail d'analyse, je n'avais pas spécialement pour objectif de refaire les calculs. Mais de résultat en résultat, je me suis pris au jeu et ma curiosité m'a poussé à comprendre d'où venaient les résultats introduits sans réelle démonstration ni explication très précise.
+	
+%	Quant au travail effectué par les auteurs, je pense que leur démarche est concise et abordable par un étudiant de licence. Il existe d'autres articles sur le rattleback, beaucoup plus complexes et beaucoup plus longs.
+%	\begin{quotation}
+%		Garcia, A., and M. Hubbard. “Spin Reversal of the Rattleback: Theory and Experiment.” Proceedings of the Royal Society of London. Series A, Mathematical and Physical Sciences, vol. 418, no. 1854, 1988, pp. 165–197., 
+%	\end{quotation}
 	%Résultats faux, hésiter pas a me contacter.
 	%Aucun erratum, peut etre juste.
 
@@ -400,11 +407,11 @@ anchorcolor = blue]{hyperref}
 	\section{Développement mathématique}
 	\label{sec:calculs}
 	Dans cette section, on essaie de retrouver une partie des expressions données par les auteurs, en détaillant au possible les méthodes et les hypothèses pour y parvenir.\\
-	Par alléger l'écriture, on pose la définition suivante :
+	Pour alléger l'écriture, on pose la définition suivante :
 	$$\dfrac{\partial}{\partial x}\equiv\partial_x$$ 
 	\subsection{Expression de z}
 	\label{subsec:z}
-	La formule \eqref{eq:z} est liée à la forme d'ellipsoïde. Dans l'article, les auteurs expliquent que cette équation est tirée des travaux d'Hermann Bondi ("The Rigid Body Dynamics of Unidirectional Spin" de 1986). J'ai donc voulu savoir comment l'obtenir, cependant la démonstration n'est pas détaillé dans les travaux de Bondi.
+	La formule \eqref{eq:z} est liée à la forme d'ellipsoïde. Dans l'article, les auteurs expliquent que cette équation est tirée des travaux d'Hermann Bondi ("The Rigid Body Dynamics of Unidirectional Spin" de 1986). J'ai donc voulu savoir comment l'obtenir, cependant la démonstration n'est pas détaillée dans les travaux de Bondi.
 	Voyons si l'on peut obtenir une relation similaire en partant de l'équation d'un ellipsoïde. Considérons tout d'abord un ellipsoïde symétrique. L'équation d'un point $(x,y,z)$ sur la surface est donnée par:
 	\begin{align*}
 		\dfrac{x^2}{a^2}&+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2}=1
@@ -412,7 +419,7 @@ anchorcolor = blue]{hyperref}
 		z^2	&=c^2\left(1-\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}\right)\\
 		z	&=c \left(1-\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}\right)^{1/2}
 		\intertext{Intervient ici l'hypothèse que $\dfrac{x}{a}$ et $\dfrac{y}{b}$ sont petits pour le point de contact (i.e petites oscillations)}
-		\intertext{On peut alors faire un developpement limité.}
+		\intertext{On peut alors faire un développement limité.}
 		z	&= c \left(1-\dfrac{1}{2}\dfrac{x^2}{a^2}-\dfrac{1}{2}\dfrac{y^2}{b^2}\right)\\
 \iff	z	&= c \left(1-\dfrac{1}{2}\dfrac{c^2x^2}{a^2c^2}-\dfrac{1}{2}\dfrac{c^2y^2}{b^2c^2}\right)
 		\intertext{On peut alors poser}
@@ -420,7 +427,7 @@ anchorcolor = blue]{hyperref}
 		\intertext{On obtient alors :}
 		z	&= c \left(1-\dfrac{1}{2}p\dfrac{x^2}{c^2}-\dfrac{1}{2}s\dfrac{y^2}{c^2}\right)
 	\end{align*}
-	On retrouve l'expression de Bondi dans le cas où $q=0$ c'est a dire d'un ellipsoïde symétrique. Il faudrait alors montrer dans le cas non symétrique l'apparition du terme "couplé".
+	On retrouve l'expression de Bondi dans le cas où $q=0$ c'est-à-dire d'un ellipsoïde symétrique. Il faudrait alors montrer dans le cas non symétrique l'apparition du terme "couplé".
 	$$q\dfrac{xy}{a^2}$$
 	
 	\subsection{Vecteur normal $\vec{u}$}
@@ -475,7 +482,7 @@ anchorcolor = blue]{hyperref}
 	\vec{\omega}=\dot{\vec{u}}\times\vec{u}+n\vec{u}
 	\end{align*}
 	
-	L'idée de poser $\vec{u}\cdot\vec{\omega}\equiv n$ m'a posé pas mal de problèmes de compréhension. Je me demandais quel en était l'intérêt, jusqu'à ce que je calcule explicitement $\vec{\omega}$.\\
+	L'idée de poser $\vec{u}\cdot\vec{\omega}\equiv n$ m'a posé des problèmes de compréhension. Je me demandais quel en était l'intérêt, jusqu'à ce que je calcule explicitement $\vec{\omega}$.\\
 	\bgroup
 	\addtolength{\jot}{5pt}
 	\begin{align*}
@@ -529,9 +536,9 @@ anchorcolor = blue]{hyperref}
 	%todo calc de v ?
 	
 	
-	\subsection{Moment cinétique et moments de force}
+	\subsection{Moment cinétique et moment de forces}
 	\label{subsec:moments}
-	On cherche à obtenir une relation entre moments de forces (exprimés au barycentre) et moment cinétique. Les quantités sont exprimées dans le référentiel du laboratoire supposé galiléen.
+	On cherche à obtenir une relation entre moment de forces (exprimés au barycentre) et moment cinétique. Les quantités sont exprimées dans le référentiel du laboratoire supposé galiléen.
 	On part de:
 	\begin{align*}
 	\vec{L}     &= \vec{r}\times \vec{p}\\
@@ -555,7 +562,7 @@ anchorcolor = blue]{hyperref}
 	\begin{align*}
 	\implies [\alpha]=[\beta]=[\gamma]=\dfrac{M.L^2}{M.L^2}=1
 	\end{align*}
-	On rappelle également que $n$ est par définition \eqref{subsec:omega} une vitesse angulaire $[n]=T^{-1}$.\\
+	On rappelle également que $n$ est par définition \eqref{subsec:omega} une vitesse angulaire. $$[n]=T^{-1}$$
 	Ainsi chaque terme de \eqref{eq:equa-diff-couplées1} et \eqref{eq:equa-diff-couplées2} est homogène à une accélération.
 	%\subsection{De l'oscillation à la rotation}
 	
@@ -626,7 +633,7 @@ anchorcolor = blue]{hyperref}
 %	\begin{equation*}
 %	\dfrac{\omega_z}{dt}
 %	\end{equation*}
-	Pour trouver l'expression de $\tau$, il suffit de calculer le moment créer par l'accélération du centre de masse au point de contact. On a alors (au premier ordre) : 
+	Pour trouver l'expression de $\tau$, il suffit de calculer le moment créé par l'accélération du centre de masse au point de contact. On a alors (au premier ordre) : 
 	\begin{align*}
 		\vec{T}	&=\vec{r}\times m\dfrac{d\vec{v}}{dt}\\
 		\intertext{Or $\tau=T_z$}
